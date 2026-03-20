@@ -1,2 +1,3 @@
 # AI-
-Projekt AI na pp
+Projekt AI na PP
+:)
