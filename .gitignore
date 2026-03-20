@@ -1,3 +1,6 @@
+# Other
+.vscode
+
 # C++ objects and libs
 *.slo
 *.lo
@@ -9,6 +12,7 @@
 *.so.*
 *.dll
 *.dylib
+*.exe
 
 # Qt-es
 object_script.*.Release
