@@ -1,0 +1,122 @@
+\doxysection{Code\+Executor Class Reference}
+\hypertarget{class_code_executor}{}\label{class_code_executor}\index{CodeExecutor@{CodeExecutor}}
+
+
+Wyodrębnia kod Python z odpowiedzi LLM i wykonuje go.  
+
+
+
+
+{\ttfamily \+\#include $<$Code\+Executor.\+h$>$}
+
+Inheritance diagram for Code\+Executor:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_code_executor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_code_executor_ae26db53b1d0b269d814337e923a756b6}{execute\+Code}} (const QString \&python\+Code)
+\begin{DoxyCompactList}\small\item\em Wykonuje kod Python asynchronicznie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_code_executor_ad6943ab82bfc35d8cf77bfd7df6c95a2}{execution\+Finished}} (const QString \&output, bool success)
+\begin{DoxyCompactList}\small\item\em Emitowany gdy kod zakończył działanie. \end{DoxyCompactList}\item 
+\Hypertarget{class_code_executor_a46cddfa2da66815fc3800a3776334ffe}\label{class_code_executor_a46cddfa2da66815fc3800a3776334ffe} 
+void {\bfseries execution\+Error} (const QString \&error\+Message)
+\begin{DoxyCompactList}\small\item\em Emitowany przy błędzie uruchomienia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_code_executor_ae3aba4f95e5ab90d7a73cffa2426a145}\label{class_code_executor_ae3aba4f95e5ab90d7a73cffa2426a145} 
+{\bfseries Code\+Executor} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_code_executor_a3e2bdbae679d6e066428e7bd4cc08a0f}\label{class_code_executor_a3e2bdbae679d6e066428e7bd4cc08a0f} 
+static QString {\bfseries extract\+Code} (const QString \&llm\+Response)
+\begin{DoxyCompactList}\small\item\em Wyodrębnia kod Python z odpowiedzi LLM (między tagami $<$\+KOD$>$...$<$/\+\+KOD$>$ lub blokami \`{}\`{}\`{}python). \end{DoxyCompactList}\item 
+\Hypertarget{class_code_executor_af97099e1d8918a3a0fc37d3ecd0aa7ce}\label{class_code_executor_af97099e1d8918a3a0fc37d3ecd0aa7ce} 
+static QString {\bfseries extract\+Schematic} (const QString \&llm\+Response)
+\begin{DoxyCompactList}\small\item\em Wyodrębnia schemat ASCII (między tagami $<$\+SCHEMAT$>$...$<$/\+\+SCHEMAT$>$). \end{DoxyCompactList}\item 
+\Hypertarget{class_code_executor_a434ed317810a7e9a54fa8e7f33f6ebc1}\label{class_code_executor_a434ed317810a7e9a54fa8e7f33f6ebc1} 
+static QString {\bfseries extract\+Explanation} (const QString \&llm\+Response)
+\begin{DoxyCompactList}\small\item\em Wyodrębnia wyjaśnienie (między tagami $<$\+WYJAŚ\+NIENIE$>$...$<$/\+\+WYJA$>$). \end{DoxyCompactList}\item 
+static QString \doxymbox{\hyperlink{class_code_executor_a5551e25b0908602e18f1d52db81172d1}{inject\+Plot\+Save}} (const QString \&code)
+\begin{DoxyCompactList}\small\item\em Modyfikuje kod Python:\+ zastępuje plt.\+show() zapisem do PNG. \end{DoxyCompactList}\item 
+\Hypertarget{class_code_executor_add3c0f638bacf757a57bb24bcf41473e}\label{class_code_executor_add3c0f638bacf757a57bb24bcf41473e} 
+static bool {\bfseries is\+Python\+Available} ()
+\begin{DoxyCompactList}\small\item\em Sprawdza czy Python jest dostępny w systemie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wyodrębnia kod Python z odpowiedzi LLM i wykonuje go. 
+
+Kod jest zapisywany do pliku tymczasowego i uruchamiany przez interpreter Python. Wykres jest zapisywany do PNG i wczytywany do zakładki Wykres. 
+
+\label{doc-func-members}
+\Hypertarget{class_code_executor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_code_executor_ae26db53b1d0b269d814337e923a756b6}\index{CodeExecutor@{CodeExecutor}!executeCode@{executeCode}}
+\index{executeCode@{executeCode}!CodeExecutor@{CodeExecutor}}
+\doxysubsubsection{\texorpdfstring{executeCode}{executeCode}}
+{\footnotesize\ttfamily \label{class_code_executor_ae26db53b1d0b269d814337e923a756b6} 
+void Code\+Executor::\+execute\+Code (\begin{DoxyParamCaption}\item[{const QString \&}]{python\+Code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Wykonuje kod Python asynchronicznie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em python\+Code} & Kod do wykonania \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_code_executor_ad6943ab82bfc35d8cf77bfd7df6c95a2}\index{CodeExecutor@{CodeExecutor}!executionFinished@{executionFinished}}
+\index{executionFinished@{executionFinished}!CodeExecutor@{CodeExecutor}}
+\doxysubsubsection{\texorpdfstring{executionFinished}{executionFinished}}
+{\footnotesize\ttfamily \label{class_code_executor_ad6943ab82bfc35d8cf77bfd7df6c95a2} 
+void Code\+Executor::\+execution\+Finished (\begin{DoxyParamCaption}\item[{const QString \&}]{output}{, }\item[{bool}]{success}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitowany gdy kod zakończył działanie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & stdout procesu (może zawierać ścieżkę PNG) \\
+\hline
+{\em success} & Czy zakończono bez błędu \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_code_executor_a5551e25b0908602e18f1d52db81172d1}\index{CodeExecutor@{CodeExecutor}!injectPlotSave@{injectPlotSave}}
+\index{injectPlotSave@{injectPlotSave}!CodeExecutor@{CodeExecutor}}
+\doxysubsubsection{\texorpdfstring{injectPlotSave()}{injectPlotSave()}}
+{\footnotesize\ttfamily \label{class_code_executor_a5551e25b0908602e18f1d52db81172d1} 
+QString Code\+Executor::\+inject\+Plot\+Save (\begin{DoxyParamCaption}\item[{const QString \&}]{code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Modyfikuje kod Python:\+ zastępuje plt.\+show() zapisem do PNG. 
+
+Dodaje na końcu kodu linię zapisującą wykres do pliku tymczasowego i drukuje ścieżkę na stdout. \doxylink{class_result_widget}{Result\+Widget} odczyta tę ścieżkę i wczyta PNG.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Oryginalny kod Python \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zmodyfikowany kod z plt.\+savefig() zamiast plt.\+show() 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_code_executor_8h}{Code\+Executor.\+h}}\item 
+build/\+\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+11\+\_\+0\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Debugowa/\+debug/\+moc\+\_\+\+Code\+Executor.\+cpp\item 
+src/\+\doxymbox{\hyperlink{_code_executor_8cpp}{Code\+Executor.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,116 @@
+\doxysection{Ollama\+Worker Class Reference}
+\hypertarget{class_ollama_worker}{}\label{class_ollama_worker}\index{OllamaWorker@{OllamaWorker}}
+
+
+Wykonuje zapytania do Ollama w osobnym wątku (QThread).  
+
+
+
+
+{\ttfamily \+\#include $<$Ollama\+Worker.\+h$>$}
+
+Inheritance diagram for Ollama\+Worker:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ollama_worker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_ollama_worker_a17a40e181c6505f26a55ecf5d6043d79}{finished}} (const QString \&response, bool success)
+\begin{DoxyCompactList}\small\item\em Emitowany po zakończeniu zapytania. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_ollama_worker_ae167fe050e62186f7c51fc60ea27bca8}{status\+Update}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Emitowany podczas postępu (informacja tekstowa). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_ollama_worker_a99407aef7c32ec2f4af46352898209f5}{Ollama\+Worker}} (const \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \&params, const \doxymbox{\hyperlink{struct_filter_result}{Filter\+Result}} \&result, bool generate\+Plot, bool generate\+Code, bool generate\+Schematic, const QString \&model="{}qwen3:\+8b"{}, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ollama_worker_aaa49af198d4bc52d998b631c4bc7779a}\label{class_ollama_worker_aaa49af198d4bc52d998b631c4bc7779a} 
+void {\bfseries run} () override
+\begin{DoxyCompactList}\small\item\em Główna metoda wątku — wykonuje zapytanie do Ollama. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wykonuje zapytania do Ollama w osobnym wątku (QThread). 
+
+Dzięki uruchomieniu w tle zapytania do modelu językowego nie blokują interfejsu graficznego. Po zakończeniu emituje sygnał \doxylink{class_ollama_worker_a17a40e181c6505f26a55ecf5d6043d79}{finished()}. 
+
+\label{doc-constructors}
+\Hypertarget{class_ollama_worker_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ollama_worker_a99407aef7c32ec2f4af46352898209f5}\index{OllamaWorker@{OllamaWorker}!OllamaWorker@{OllamaWorker}}
+\index{OllamaWorker@{OllamaWorker}!OllamaWorker@{OllamaWorker}}
+\doxysubsubsection{\texorpdfstring{OllamaWorker()}{OllamaWorker()}}
+{\footnotesize\ttfamily \label{class_ollama_worker_a99407aef7c32ec2f4af46352898209f5} 
+Ollama\+Worker::\+\+Ollama\+Worker (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \&}]{params}{, }\item[{const \doxymbox{\hyperlink{struct_filter_result}{Filter\+Result}} \&}]{result}{, }\item[{bool}]{generate\+Plot}{, }\item[{bool}]{generate\+Code}{, }\item[{bool}]{generate\+Schematic}{, }\item[{const QString \&}]{model}{ = {\ttfamily "{}qwen3:\+8b"{}}, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Parametry filtru \\
+\hline
+{\em result} & Wyniki obliczeń \\
+\hline
+{\em generate\+Plot} & Generuj wykres \\
+\hline
+{\em generate\+Code} & Generuj kod \\
+\hline
+{\em generate\+Schematic} & Generuj schemat \\
+\hline
+{\em model} & Nazwa modelu Ollama \\
+\hline
+{\em parent} & Rodzic Qt \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ollama_worker_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ollama_worker_a17a40e181c6505f26a55ecf5d6043d79}\index{OllamaWorker@{OllamaWorker}!finished@{finished}}
+\index{finished@{finished}!OllamaWorker@{OllamaWorker}}
+\doxysubsubsection{\texorpdfstring{finished}{finished}}
+{\footnotesize\ttfamily \label{class_ollama_worker_a17a40e181c6505f26a55ecf5d6043d79} 
+void Ollama\+Worker::\+finished (\begin{DoxyParamCaption}\item[{const QString \&}]{response}{, }\item[{bool}]{success}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitowany po zakończeniu zapytania. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & Odpowiedź modelu (lub komunikat błędu) \\
+\hline
+{\em success} & Czy zapytanie się powiodło \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ollama_worker_ae167fe050e62186f7c51fc60ea27bca8}\index{OllamaWorker@{OllamaWorker}!statusUpdate@{statusUpdate}}
+\index{statusUpdate@{statusUpdate}!OllamaWorker@{OllamaWorker}}
+\doxysubsubsection{\texorpdfstring{statusUpdate}{statusUpdate}}
+{\footnotesize\ttfamily \label{class_ollama_worker_ae167fe050e62186f7c51fc60ea27bca8} 
+void Ollama\+Worker::\+status\+Update (\begin{DoxyParamCaption}\item[{const QString \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitowany podczas postępu (informacja tekstowa). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Wiadomość statusu \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_ollama_worker_8h}{Ollama\+Worker.\+h}}\item 
+build/\+\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+11\+\_\+0\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Debugowa/\+debug/\+moc\+\_\+\+Ollama\+Worker.\+cpp\item 
+src/\+\doxymbox{\hyperlink{_ollama_worker_8cpp}{Ollama\+Worker.\+cpp}}\end{DoxyCompactItemize}

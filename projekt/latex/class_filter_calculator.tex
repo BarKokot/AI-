@@ -1,0 +1,186 @@
+\doxysection{Filter\+Calculator Class Reference}
+\hypertarget{class_filter_calculator}{}\label{class_filter_calculator}\index{FilterCalculator@{FilterCalculator}}
+
+
+Realizuje obliczenia matematyczne dla filtrów elektronicznych.  
+
+
+
+
+{\ttfamily \+\#include $<$Filter\+Calculator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_filter_calculator_a443464a0bd45fc97a15f1f3182be3859}\label{class_filter_calculator_a443464a0bd45fc97a15f1f3182be3859} 
+{\bfseries Filter\+Calculator} ()=default
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_filter_result}{Filter\+Result}} \doxymbox{\hyperlink{class_filter_calculator_ae75deff418434baf6edf3af463036a13}{calculate}} (const \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \&params)
+\begin{DoxyCompactList}\small\item\em Przeprowadza obliczenia na podstawie podanych parametrów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \doxymbox{\hyperlink{class_filter_calculator_a0fa00976ab3d7bf25e8ca571b1b5233e}{calc\+Cutoff\+Frequency}} (double R, double C)
+\begin{DoxyCompactList}\small\item\em Oblicza częstotliwość graniczną filtru RC. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_filter_calculator_adf5dac2c256b2834013439fe800b3f9f}{calc\+Capacitance}} (double f, double R)
+\begin{DoxyCompactList}\small\item\em Oblicza pojemność na podstawie f i R. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_filter_calculator_ada03ab70c027fa1211b4986b3140ee22}{calc\+Resistance}} (double f, double C)
+\begin{DoxyCompactList}\small\item\em Oblicza rezystancję na podstawie f i C. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_filter_calculator_aafea001a95241f30e76f27f8546f5676}{calc\+QFactor}} (double f0, double bandwidth)
+\begin{DoxyCompactList}\small\item\em Oblicza dobroć filtru BP/\+\+BS. \end{DoxyCompactList}\item 
+static QString \doxymbox{\hyperlink{class_filter_calculator_a44e67dba456755ec5a221fe897d6ea0c}{format\+Engineering}} (double value, const QString \&unit)
+\begin{DoxyCompactList}\small\item\em Formatuje wartość w jednostkach inżynierskich. \end{DoxyCompactList}\item 
+static std::\+pair$<$ bool, QString $>$ \doxymbox{\hyperlink{class_filter_calculator_a847f847798624a0db523c10219e10d1e}{validate}} (const \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \&params)
+\begin{DoxyCompactList}\small\item\em Waliduje parametry wejściowe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Realizuje obliczenia matematyczne dla filtrów elektronicznych. 
+
+Klasa oblicza parametry filtrów RC (dolnoprzepustowych, górnoprzepustowych, pasmo-\/przepustowych i pasmo-\/zaporowych) na podstawie podanych przez użytkownika wartości elementów lub wymaganych częstotliwości. 
+
+\label{doc-func-members}
+\Hypertarget{class_filter_calculator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_filter_calculator_adf5dac2c256b2834013439fe800b3f9f}\index{FilterCalculator@{FilterCalculator}!calcCapacitance@{calcCapacitance}}
+\index{calcCapacitance@{calcCapacitance}!FilterCalculator@{FilterCalculator}}
+\doxysubsubsection{\texorpdfstring{calcCapacitance()}{calcCapacitance()}}
+{\footnotesize\ttfamily \label{class_filter_calculator_adf5dac2c256b2834013439fe800b3f9f} 
+double Filter\+Calculator::\+calc\+Capacitance (\begin{DoxyParamCaption}\item[{double}]{f}{, }\item[{double}]{R}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Oblicza pojemność na podstawie f i R. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Częstotliwość \+[Hz]\+ \\
+\hline
+{\em R} & Rezystancja \+[Ohm]\+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pojemność \+[F]\+ 
+\end{DoxyReturn}
+\Hypertarget{class_filter_calculator_a0fa00976ab3d7bf25e8ca571b1b5233e}\index{FilterCalculator@{FilterCalculator}!calcCutoffFrequency@{calcCutoffFrequency}}
+\index{calcCutoffFrequency@{calcCutoffFrequency}!FilterCalculator@{FilterCalculator}}
+\doxysubsubsection{\texorpdfstring{calcCutoffFrequency()}{calcCutoffFrequency()}}
+{\footnotesize\ttfamily \label{class_filter_calculator_a0fa00976ab3d7bf25e8ca571b1b5233e} 
+double Filter\+Calculator::\+calc\+Cutoff\+Frequency (\begin{DoxyParamCaption}\item[{double}]{R}{, }\item[{double}]{C}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Oblicza częstotliwość graniczną filtru RC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Rezystancja \+[Ohm]\+ \\
+\hline
+{\em C} & Pojemność \+[F]\+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Częstotliwość graniczna \+[Hz]\+ 
+\end{DoxyReturn}
+\Hypertarget{class_filter_calculator_aafea001a95241f30e76f27f8546f5676}\index{FilterCalculator@{FilterCalculator}!calcQFactor@{calcQFactor}}
+\index{calcQFactor@{calcQFactor}!FilterCalculator@{FilterCalculator}}
+\doxysubsubsection{\texorpdfstring{calcQFactor()}{calcQFactor()}}
+{\footnotesize\ttfamily \label{class_filter_calculator_aafea001a95241f30e76f27f8546f5676} 
+double Filter\+Calculator::\+calc\+QFactor (\begin{DoxyParamCaption}\item[{double}]{f0}{, }\item[{double}]{bandwidth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Oblicza dobroć filtru BP/\+\+BS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f0} & Częstotliwość środkowa \+[Hz]\+ \\
+\hline
+{\em bandwidth} & Pasmo \+[Hz]\+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dobroć Q 
+\end{DoxyReturn}
+\Hypertarget{class_filter_calculator_ada03ab70c027fa1211b4986b3140ee22}\index{FilterCalculator@{FilterCalculator}!calcResistance@{calcResistance}}
+\index{calcResistance@{calcResistance}!FilterCalculator@{FilterCalculator}}
+\doxysubsubsection{\texorpdfstring{calcResistance()}{calcResistance()}}
+{\footnotesize\ttfamily \label{class_filter_calculator_ada03ab70c027fa1211b4986b3140ee22} 
+double Filter\+Calculator::\+calc\+Resistance (\begin{DoxyParamCaption}\item[{double}]{f}{, }\item[{double}]{C}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Oblicza rezystancję na podstawie f i C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Częstotliwość \+[Hz]\+ \\
+\hline
+{\em C} & Pojemność \+[F]\+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rezystancja \+[Ohm]\+ 
+\end{DoxyReturn}
+\Hypertarget{class_filter_calculator_ae75deff418434baf6edf3af463036a13}\index{FilterCalculator@{FilterCalculator}!calculate@{calculate}}
+\index{calculate@{calculate}!FilterCalculator@{FilterCalculator}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{class_filter_calculator_ae75deff418434baf6edf3af463036a13} 
+\doxymbox{\hyperlink{struct_filter_result}{Filter\+Result}} Filter\+Calculator::\+calculate (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \&}]{params}{}\end{DoxyParamCaption})}
+
+
+
+Przeprowadza obliczenia na podstawie podanych parametrów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Parametry wejściowe filtru \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wyniki obliczeń 
+\end{DoxyReturn}
+\Hypertarget{class_filter_calculator_a44e67dba456755ec5a221fe897d6ea0c}\index{FilterCalculator@{FilterCalculator}!formatEngineering@{formatEngineering}}
+\index{formatEngineering@{formatEngineering}!FilterCalculator@{FilterCalculator}}
+\doxysubsubsection{\texorpdfstring{formatEngineering()}{formatEngineering()}}
+{\footnotesize\ttfamily \label{class_filter_calculator_a44e67dba456755ec5a221fe897d6ea0c} 
+QString Filter\+Calculator::\+format\+Engineering (\begin{DoxyParamCaption}\item[{double}]{value}{, }\item[{const QString \&}]{unit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Formatuje wartość w jednostkach inżynierskich. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Wartość \\
+\hline
+{\em unit} & Jednostka (np. "{}\+F"{}, "{}Ω"{}, "{}\+Hz"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sformatowany string 
+\end{DoxyReturn}
+\Hypertarget{class_filter_calculator_a847f847798624a0db523c10219e10d1e}\index{FilterCalculator@{FilterCalculator}!validate@{validate}}
+\index{validate@{validate}!FilterCalculator@{FilterCalculator}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily \label{class_filter_calculator_a847f847798624a0db523c10219e10d1e} 
+std::\+pair$<$ bool, QString $>$ Filter\+Calculator::\+validate (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \&}]{params}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Waliduje parametry wejściowe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Parametry do walidacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Para:\+ (czy poprawne, komunikat błędu) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_filter_calculator_8h}{Filter\+Calculator.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_filter_calculator_8cpp}{Filter\+Calculator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\doxysection{Parameter\+Widget.\+h}
+\hypertarget{_parameter_widget_8h_source}{}\label{_parameter_widget_8h_source}\index{include/ParameterWidget.h@{include/ParameterWidget.h}}
+\doxymbox{\hyperlink{_parameter_widget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_filter_types_8h}{FilterTypes.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QStackedWidget>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QGroupBox>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QRadioButton>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }ParameterWidget\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ ParameterWidget(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parameter_widget_a82a4940e6a18b5e2c682ef5679f93a5a}{setFilterType}}(\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{FilterType}}\ type);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\ \doxymbox{\hyperlink{class_parameter_widget_ae30ab6fd23420a9838cc4690a1140036}{collectParams}}(\textcolor{keywordtype}{bool}\&\ ok);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parameter_widget_a5c1567ef67003d1e31d24fc35ddd76d5}{clearFields}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ signals:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_parameter_widget_ae853602479f609363166deead681fb6e}{analyzeRequested}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ onModeChanged();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ setupRCMode();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ setupFMode();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ updateVisibility();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ isBandType()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{FilterType}}\ m\_filterType\ =\ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa835f2dc4fd545ddcd275198d9fbadf63}{FilterType::LowPass}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Tryb}}
+\DoxyCodeLine{00067\ \ \ \ \ QRadioButton*\ m\_radioKnownRC;}
+\DoxyCodeLine{00068\ \ \ \ \ QRadioButton*\ m\_radioKnownF;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Stacki\ dla\ trybów}}
+\DoxyCodeLine{00071\ \ \ \ \ QStackedWidget*\ m\_stack;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ ──\ Pola\ trybu\ RC\ ──}}
+\DoxyCodeLine{00074\ \ \ \ \ QWidget*\ \ \ m\_rcWidget;}
+\DoxyCodeLine{00075\ \ \ \ \ QLineEdit*\ m\_edtR;}
+\DoxyCodeLine{00076\ \ \ \ \ QLineEdit*\ m\_edtC;}
+\DoxyCodeLine{00077\ \ \ \ \ QLineEdit*\ m\_edtR2;}
+\DoxyCodeLine{00078\ \ \ \ \ QLineEdit*\ m\_edtC2;}
+\DoxyCodeLine{00079\ \ \ \ \ QLabel*\ \ \ \ m\_lblR2;}
+\DoxyCodeLine{00080\ \ \ \ \ QLabel*\ \ \ \ m\_lblC2;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ ──\ Pola\ trybu\ F\ ──}}
+\DoxyCodeLine{00083\ \ \ \ \ QWidget*\ \ \ m\_fWidget;}
+\DoxyCodeLine{00084\ \ \ \ \ QLineEdit*\ m\_edtF0;}
+\DoxyCodeLine{00085\ \ \ \ \ QLineEdit*\ m\_edtF1;}
+\DoxyCodeLine{00086\ \ \ \ \ QLineEdit*\ m\_edtF2;}
+\DoxyCodeLine{00087\ \ \ \ \ QLineEdit*\ m\_edtImpedance;}
+\DoxyCodeLine{00088\ \ \ \ \ QLabel*\ \ \ \ m\_lblF0;}
+\DoxyCodeLine{00089\ \ \ \ \ QLabel*\ \ \ \ m\_lblF1F2;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//\ Opis\ dla\ "{}Inne"{}}}
+\DoxyCodeLine{00092\ \ \ \ \ QWidget*\ \ \ m\_customWidget;}
+\DoxyCodeLine{00093\ \ \ \ \ QLineEdit*\ m\_edtCustomDesc;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ QPushButton*\ m\_btnAnalyze;}
+\DoxyCodeLine{00096\ \};}
+
+\end{DoxyCode}

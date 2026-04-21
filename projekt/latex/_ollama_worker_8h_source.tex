@@ -1,0 +1,42 @@
+\doxysection{Ollama\+Worker.\+h}
+\hypertarget{_ollama_worker_8h_source}{}\label{_ollama_worker_8h_source}\index{include/OllamaWorker.h@{include/OllamaWorker.h}}
+\doxymbox{\hyperlink{_ollama_worker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_filter_types_8h}{FilterTypes.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_ollama_client_8h}{OllamaClient.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QThread>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_ollama_worker_a99407aef7c32ec2f4af46352898209f5}{OllamaWorker}}\ :\ \textcolor{keyword}{public}\ QThread\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_ollama_worker_a99407aef7c32ec2f4af46352898209f5}{OllamaWorker}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ params,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\&\ result,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generatePlot,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generateCode,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generateSchematic,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\&\ model\ =\ \textcolor{stringliteral}{"{}qwen3:8b"{}},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ signals:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_ollama_worker_a17a40e181c6505f26a55ecf5d6043d79}{finished}}(\textcolor{keyword}{const}\ QString\&\ response,\ \textcolor{keywordtype}{bool}\ success);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_ollama_worker_ae167fe050e62186f7c51fc60ea27bca8}{statusUpdate}}(\textcolor{keyword}{const}\ QString\&\ message);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_ollama_worker_aaa49af198d4bc52d998b631c4bc7779a}{run}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\ \ m\_params;}
+\DoxyCodeLine{00064\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ \ m\_result;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ m\_generatePlot;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ m\_generateCode;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ m\_generateSchematic;}
+\DoxyCodeLine{00068\ \ \ \ \ QString\ \ \ \ \ \ \ m\_model;}
+\DoxyCodeLine{00069\ \};}
+
+\end{DoxyCode}

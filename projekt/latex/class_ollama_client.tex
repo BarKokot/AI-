@@ -1,0 +1,169 @@
+\doxysection{Ollama\+Client Class Reference}
+\hypertarget{class_ollama_client}{}\label{class_ollama_client}\index{OllamaClient@{OllamaClient}}
+
+
+Obsługuje komunikację z API serwera Ollama przez REST.  
+
+
+
+
+{\ttfamily \+\#include $<$Ollama\+Client.\+h$>$}
+
+Inheritance diagram for Ollama\+Client:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ollama_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_ollama_client_adcdbb33aed67ee0f3d8d7cd9d40f6b8f}{Ollama\+Client}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr, const QString \&host="{}localhost"{}, int port=11434)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+QString \doxymbox{\hyperlink{class_ollama_client_adeb4c8e25f77a26b5a137ca314109cfb}{send\+Request}} (const QString \&system\+Prompt, const QString \&user\+Prompt, const QString \&model="{}qwen3:\+8b"{})
+\begin{DoxyCompactList}\small\item\em Wysyła zapytanie do modelu i zwraca odpowiedź (blokujące). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_ollama_client_ad9ab6e2bc694c7394055b112ea2fe76b}{is\+Server\+Available}} ()
+\begin{DoxyCompactList}\small\item\em Sprawdza czy serwer Ollama jest dostępny. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_ollama_client_a851872c48b3f68c557abb19606ca123b}{set\+Timeout}} (int ms)
+\begin{DoxyCompactList}\small\item\em Ustawia timeout zapytania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static QString \doxymbox{\hyperlink{class_ollama_client_a58c5b93e21623b95d0367fa963609144}{build\+System\+Prompt}} (\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}} filter\+Type)
+\begin{DoxyCompactList}\small\item\em Buduje prompt systemowy dla projektanta filtrów. \end{DoxyCompactList}\item 
+static QString \doxymbox{\hyperlink{class_ollama_client_a19750ed322cf2a24a13e25b723650edc}{build\+User\+Prompt}} (const \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \&params, const \doxymbox{\hyperlink{struct_filter_result}{Filter\+Result}} \&result, bool generate\+Plot, bool generate\+Code, bool generate\+Schematic)
+\begin{DoxyCompactList}\small\item\em Buduje prompt użytkownika z parametrami filtru. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Obsługuje komunikację z API serwera Ollama przez REST. 
+
+Klasa buduje zapytania JSON i wysyła je synchronicznie do endpointu /\+api/\+generate działającego serwera Ollama. Przeznaczona do użycia wewnątrz wątku roboczego (\doxylink{class_ollama_worker}{Ollama\+Worker}). 
+
+\label{doc-constructors}
+\Hypertarget{class_ollama_client_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ollama_client_adcdbb33aed67ee0f3d8d7cd9d40f6b8f}\index{OllamaClient@{OllamaClient}!OllamaClient@{OllamaClient}}
+\index{OllamaClient@{OllamaClient}!OllamaClient@{OllamaClient}}
+\doxysubsubsection{\texorpdfstring{OllamaClient()}{OllamaClient()}}
+{\footnotesize\ttfamily \label{class_ollama_client_adcdbb33aed67ee0f3d8d7cd9d40f6b8f} 
+Ollama\+Client::\+\+Ollama\+Client (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}, }\item[{const QString \&}]{host}{ = {\ttfamily "{}localhost"{}}, }\item[{int}]{port}{ = {\ttfamily 11434}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Rodzic Qt \\
+\hline
+{\em host} & Adres hosta (domyślnie "{}localhost"{}) \\
+\hline
+{\em port} & Port serwera (domyślnie 11434) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ollama_client_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ollama_client_a58c5b93e21623b95d0367fa963609144}\index{OllamaClient@{OllamaClient}!buildSystemPrompt@{buildSystemPrompt}}
+\index{buildSystemPrompt@{buildSystemPrompt}!OllamaClient@{OllamaClient}}
+\doxysubsubsection{\texorpdfstring{buildSystemPrompt()}{buildSystemPrompt()}}
+{\footnotesize\ttfamily \label{class_ollama_client_a58c5b93e21623b95d0367fa963609144} 
+QString Ollama\+Client::\+build\+System\+Prompt (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}}}]{filter\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Buduje prompt systemowy dla projektanta filtrów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+Type} & Typ filtru \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gotowy system prompt 
+\end{DoxyReturn}
+\Hypertarget{class_ollama_client_a19750ed322cf2a24a13e25b723650edc}\index{OllamaClient@{OllamaClient}!buildUserPrompt@{buildUserPrompt}}
+\index{buildUserPrompt@{buildUserPrompt}!OllamaClient@{OllamaClient}}
+\doxysubsubsection{\texorpdfstring{buildUserPrompt()}{buildUserPrompt()}}
+{\footnotesize\ttfamily \label{class_ollama_client_a19750ed322cf2a24a13e25b723650edc} 
+QString Ollama\+Client::\+build\+User\+Prompt (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \&}]{params}{, }\item[{const \doxymbox{\hyperlink{struct_filter_result}{Filter\+Result}} \&}]{result}{, }\item[{bool}]{generate\+Plot}{, }\item[{bool}]{generate\+Code}{, }\item[{bool}]{generate\+Schematic}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Buduje prompt użytkownika z parametrami filtru. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Parametry filtru \\
+\hline
+{\em result} & Wyniki obliczeń \\
+\hline
+{\em generate\+Plot} & Czy generować kod wykresu \\
+\hline
+{\em generate\+Code} & Czy generować pełny kod \\
+\hline
+{\em generate\+Schematic} & Czy generować schemat ASCII \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gotowy user prompt 
+\end{DoxyReturn}
+\Hypertarget{class_ollama_client_ad9ab6e2bc694c7394055b112ea2fe76b}\index{OllamaClient@{OllamaClient}!isServerAvailable@{isServerAvailable}}
+\index{isServerAvailable@{isServerAvailable}!OllamaClient@{OllamaClient}}
+\doxysubsubsection{\texorpdfstring{isServerAvailable()}{isServerAvailable()}}
+{\footnotesize\ttfamily \label{class_ollama_client_ad9ab6e2bc694c7394055b112ea2fe76b} 
+bool Ollama\+Client::\+is\+Server\+Available (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sprawdza czy serwer Ollama jest dostępny. 
+
+\begin{DoxyReturn}{Returns}
+true jeśli serwer odpowiada na /\+api/\+tags 
+\end{DoxyReturn}
+\Hypertarget{class_ollama_client_adeb4c8e25f77a26b5a137ca314109cfb}\index{OllamaClient@{OllamaClient}!sendRequest@{sendRequest}}
+\index{sendRequest@{sendRequest}!OllamaClient@{OllamaClient}}
+\doxysubsubsection{\texorpdfstring{sendRequest()}{sendRequest()}}
+{\footnotesize\ttfamily \label{class_ollama_client_adeb4c8e25f77a26b5a137ca314109cfb} 
+QString Ollama\+Client::\+send\+Request (\begin{DoxyParamCaption}\item[{const QString \&}]{system\+Prompt}{, }\item[{const QString \&}]{user\+Prompt}{, }\item[{const QString \&}]{model}{ = {\ttfamily "{}qwen3:\+8b"{}}}\end{DoxyParamCaption})}
+
+
+
+Wysyła zapytanie do modelu i zwraca odpowiedź (blokujące). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em system\+Prompt} & Prompt systemowy (rola modelu) \\
+\hline
+{\em user\+Prompt} & Prompt użytkownika (zapytanie) \\
+\hline
+{\em model} & Nazwa modelu Ollama \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tekst odpowiedzi lub komunikat błędu 
+\end{DoxyReturn}
+\Hypertarget{class_ollama_client_a851872c48b3f68c557abb19606ca123b}\index{OllamaClient@{OllamaClient}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!OllamaClient@{OllamaClient}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily \label{class_ollama_client_a851872c48b3f68c557abb19606ca123b} 
+void Ollama\+Client::\+set\+Timeout (\begin{DoxyParamCaption}\item[{int}]{ms}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ustawia timeout zapytania. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Timeout w milisekundach \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_ollama_client_8h}{Ollama\+Client.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_ollama_client_8cpp}{Ollama\+Client.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\doxysection{Filter\+Params Struct Reference}
+\hypertarget{struct_filter_params}{}\label{struct_filter_params}\index{FilterParams@{FilterParams}}
+
+
+Struktura przechowująca parametry filtru podane przez użytkownika.  
+
+
+
+
+{\ttfamily \+\#include $<$Filter\+Types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_filter_params_a74873b357b5760a57382a423de6b6fb9}\label{struct_filter_params_a74873b357b5760a57382a423de6b6fb9} 
+\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}} {\bfseries type} = \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa835f2dc4fd545ddcd275198d9fbadf63}{Filter\+Type::\+\+Low\+Pass}}
+\begin{DoxyCompactList}\small\item\em Typ filtru. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_ac78393cd275ad52cbb8d1db441b89720}\label{struct_filter_params_ac78393cd275ad52cbb8d1db441b89720} 
+\doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844}{Parameter\+Mode}} {\bfseries mode} = \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844a7bd44c2a44f8d76d7083f466211c25d8}{Parameter\+Mode::\+\+Known\+RC}}
+\begin{DoxyCompactList}\small\item\em Tryb parametrów. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a3bd69c8343838851a66732868637f53a}\label{struct_filter_params_a3bd69c8343838851a66732868637f53a} 
+double {\bfseries R} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Rezystancja \+[Ohm]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_aa98773b71fbfb916a076c33320f5c113}\label{struct_filter_params_aa98773b71fbfb916a076c33320f5c113} 
+double {\bfseries C} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Pojemność \+[F]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a26322966c4c61c2a518c11e541916a60}\label{struct_filter_params_a26322966c4c61c2a518c11e541916a60} 
+double {\bfseries R2} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Rezystancja 2 (dla BP/\+\+BS) \+[Ohm]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a62b51739d89e70436d402fd09a044e5f}\label{struct_filter_params_a62b51739d89e70436d402fd09a044e5f} 
+double {\bfseries C2} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Pojemność 2 (dla BP/\+\+BS) \+[F]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a370c2cbb8cb8505b240f83ebdcbb07b6}\label{struct_filter_params_a370c2cbb8cb8505b240f83ebdcbb07b6} 
+double {\bfseries L} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Indukcyjność (opcjonalnie) \+[H]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a506a8f3efae30d493ea783844e88a9cd}\label{struct_filter_params_a506a8f3efae30d493ea783844e88a9cd} 
+double {\bfseries f0} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Częstotliwość graniczna/\+środkowa \+[Hz]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a2912a26e1c1467a2b336c523ae818d71}\label{struct_filter_params_a2912a26e1c1467a2b336c523ae818d71} 
+double {\bfseries f1} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Dolna częstotliwość (dla BP/\+\+BS) \+[Hz]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a03620664080cb9feb60b9b6fe9a4667c}\label{struct_filter_params_a03620664080cb9feb60b9b6fe9a4667c} 
+double {\bfseries f2} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Górna częstotliwość (dla BP/\+\+BS) \+[Hz]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_ae5f564a32fb086dcfc1c6e9a3f8f5af0}\label{struct_filter_params_ae5f564a32fb086dcfc1c6e9a3f8f5af0} 
+double {\bfseries impedance} = 50.\+0
+\begin{DoxyCompactList}\small\item\em Impedancja charakterystyczna \+[Ohm]\+. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a6b868cce8bcb1a915f7fa9e2ea252e99}\label{struct_filter_params_a6b868cce8bcb1a915f7fa9e2ea252e99} 
+bool {\bfseries generate\+Plot} = true
+\begin{DoxyCompactList}\small\item\em Czy generować wykres. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_ab862655b38adb09295122baedb767078}\label{struct_filter_params_ab862655b38adb09295122baedb767078} 
+bool {\bfseries generate\+Code} = true
+\begin{DoxyCompactList}\small\item\em Czy generować kod Python. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a2b08ccb914ff47b7e1391623bd7af0f1}\label{struct_filter_params_a2b08ccb914ff47b7e1391623bd7af0f1} 
+bool {\bfseries generate\+Schematic} = true
+\begin{DoxyCompactList}\small\item\em Czy generować schemat. \end{DoxyCompactList}\item 
+\Hypertarget{struct_filter_params_a16f2a200b6ae99499afc161e75f0188d}\label{struct_filter_params_a16f2a200b6ae99499afc161e75f0188d} 
+QString {\bfseries custom\+Description}
+\begin{DoxyCompactList}\small\item\em Opis dodatkowy dla trybu "{}\+Inne"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struktura przechowująca parametry filtru podane przez użytkownika. 
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_filter_types_8h}{Filter\+Types.\+h}}\end{DoxyCompactItemize}

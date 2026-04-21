@@ -1,0 +1,60 @@
+\doxysection{Main\+Window.\+h}
+\hypertarget{_main_window_8h_source}{}\label{_main_window_8h_source}\index{include/MainWindow.h@{include/MainWindow.h}}
+\doxymbox{\hyperlink{_main_window_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_filter_types_8h}{FilterTypes.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_filter_calculator_8h}{FilterCalculator.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_ollama_worker_8h}{OllamaWorker.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_code_executor_8h}{CodeExecutor.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_parameter_widget_8h}{ParameterWidget.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_result_widget_8h}{ResultWidget.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QComboBox>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QTabWidget>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \doxymbox{\hyperlink{class_main_window_a1f7d2c56410fc1bfa135bb907d43313f}{\string~MainWindow}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ onFilterTypeChanged(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ onAnalyzeRequested();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ onLLMFinished(\textcolor{keyword}{const}\ QString\&\ response,\ \textcolor{keywordtype}{bool}\ success);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ onLLMStatus(\textcolor{keyword}{const}\ QString\&\ message);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ onExecuteCode(\textcolor{keyword}{const}\ QString\&\ code);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ onExecutionFinished(\textcolor{keyword}{const}\ QString\&\ output,\ \textcolor{keywordtype}{bool}\ success);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ onExecutionError(\textcolor{keyword}{const}\ QString\&\ error);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ setupMenuBar();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ setUiBusy(\textcolor{keywordtype}{bool}\ busy);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ applyStyleSheet();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Komponenty\ UI}}
+\DoxyCodeLine{00062\ \ \ \ \ QComboBox*\ \ \ \ \ \ \ m\_filterTypeCombo;}
+\DoxyCodeLine{00063\ \ \ \ \ QTabWidget*\ \ \ \ \ \ m\_mainTabs;}
+\DoxyCodeLine{00064\ \ \ \ \ \doxymbox{\hyperlink{class_parameter_widget}{ParameterWidget}}*\ m\_paramWidget;}
+\DoxyCodeLine{00065\ \ \ \ \ \doxymbox{\hyperlink{class_result_widget}{ResultWidget}}*\ \ \ \ m\_resultWidget;}
+\DoxyCodeLine{00066\ \ \ \ \ QLineEdit*\ \ \ \ \ \ \ m\_modelNameEdit;}
+\DoxyCodeLine{00067\ \ \ \ \ QLabel*\ \ \ \ \ \ \ \ \ \ m\_ollamaStatusLabel;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Logika}}
+\DoxyCodeLine{00070\ \ \ \ \ \doxymbox{\hyperlink{class_filter_calculator}{FilterCalculator}}\ m\_calculator;}
+\DoxyCodeLine{00071\ \ \ \ \ \doxymbox{\hyperlink{class_ollama_worker}{OllamaWorker}}*\ \ \ \ m\_worker\ \ \ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00072\ \ \ \ \ \doxymbox{\hyperlink{class_code_executor}{CodeExecutor}}*\ \ \ \ m\_executor\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00073\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\ \ \ \ \ m\_lastParams;}
+\DoxyCodeLine{00074\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ \ \ \ \ m\_lastResult;}
+\DoxyCodeLine{00075\ \};}
+
+\end{DoxyCode}

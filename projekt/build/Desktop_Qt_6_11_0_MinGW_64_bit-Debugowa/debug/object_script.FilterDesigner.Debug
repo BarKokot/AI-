@@ -1,0 +1,15 @@
+debug/main.o
+debug/MainWindow.o
+debug/FilterCalculator.o
+debug/OllamaClient.o
+debug/OllamaWorker.o
+debug/CodeExecutor.o
+debug/ParameterWidget.o
+debug/ResultWidget.o
+debug/qrc_resources.o
+debug/moc_MainWindow.o
+debug/moc_OllamaClient.o
+debug/moc_OllamaWorker.o
+debug/moc_CodeExecutor.o
+debug/moc_ParameterWidget.o
+debug/moc_ResultWidget.o

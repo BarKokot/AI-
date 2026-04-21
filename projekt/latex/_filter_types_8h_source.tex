@@ -1,0 +1,81 @@
+\doxysection{Filter\+Types.\+h}
+\hypertarget{_filter_types_8h_source}{}\label{_filter_types_8h_source}\index{include/FilterTypes.h@{include/FilterTypes.h}}
+\doxymbox{\hyperlink{_filter_types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QStringList>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{FilterType}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa835f2dc4fd545ddcd275198d9fbadf63}{LowPass}},\ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fae9456dc865a19e434997ea20bb5373f6}{HighPass}},\ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa39c9e9c45a479147bf5f74156421c744}{BandPass}},\ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6d5db574bad228c5f0f92c07e1706fcc}{BandStop}},\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6311ae17c1ee52b36e68aaf4ad066387}{Other}}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844}{ParameterMode}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844a7bd44c2a44f8d76d7083f466211c25d8}{KnownRC}},\ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844aa26571fc070d97ea3638847d57313a70}{KnownF}}\ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{FilterType}}\ \doxymbox{\hyperlink{struct_filter_params_a74873b357b5760a57382a423de6b6fb9}{type}}\ =\ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa835f2dc4fd545ddcd275198d9fbadf63}{FilterType::LowPass}};\ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844}{ParameterMode}}\ \doxymbox{\hyperlink{struct_filter_params_ac78393cd275ad52cbb8d1db441b89720}{mode}}\ =\ \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844a7bd44c2a44f8d76d7083f466211c25d8}{ParameterMode::KnownRC}};\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Parametry\ w\ trybie\ KnownRC}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_a3bd69c8343838851a66732868637f53a}{R}}\ =\ 0.0;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_aa98773b71fbfb916a076c33320f5c113}{C}}\ =\ 0.0;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_a26322966c4c61c2a518c11e541916a60}{R2}}\ =\ 0.0;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_a62b51739d89e70436d402fd09a044e5f}{C2}}\ =\ 0.0;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_a370c2cbb8cb8505b240f83ebdcbb07b6}{L}}\ =\ 0.0;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Parametry\ w\ trybie\ KnownF}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_a506a8f3efae30d493ea783844e88a9cd}{f0}}\ =\ 0.0;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_a2912a26e1c1467a2b336c523ae818d71}{f1}}\ =\ 0.0;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_a03620664080cb9feb60b9b6fe9a4667c}{f2}}\ =\ 0.0;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_params_ae5f564a32fb086dcfc1c6e9a3f8f5af0}{impedance}}\ =\ 50.0;\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Opcje\ generowania}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_filter_params_a6b868cce8bcb1a915f7fa9e2ea252e99}{generatePlot}}\ =\ \textcolor{keyword}{true};\ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_filter_params_ab862655b38adb09295122baedb767078}{generateCode}}\ =\ \textcolor{keyword}{true};\ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_filter_params_a2b08ccb914ff47b7e1391623bd7af0f1}{generateSchematic}}\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ QString\ \doxymbox{\hyperlink{struct_filter_params_a16f2a200b6ae99499afc161e75f0188d}{customDescription}};\ }
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_result_a71492d0586a98638402186e9d4b963f2}{frequency}}\ =\ 0.0;\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_result_a70143327ab4fe2992956df7746850591}{R\_calc}}\ =\ 0.0;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_result_a6431465bbe0e53441be5b4c87150ec73}{C\_calc}}\ =\ 0.0;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_result_a9aca2df4072f78e5d918d9f9b41b53af}{R2\_calc}}\ =\ 0.0;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_result_a6c38003631cd9ddb93845d2d6dbb2a19}{C2\_calc}}\ =\ 0.0;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_result_a96a3cf3c1edf1672c554fae654876c48}{Q}}\ =\ 0.0;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_filter_result_acd329b5f5d856e38661e20738cd2405e}{bandwidth}}\ =\ 0.0;\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ QString\ \doxymbox{\hyperlink{struct_filter_result_a2055908244d86748856bcaa98c3148c9}{description}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_filter_result_a04cf93e2c4947c5ac700b2215ca6af3f}{valid}}\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ QString\ \doxymbox{\hyperlink{struct_filter_result_aa54ecdebd9bab12c82a1c488ffe79661}{errorMessage}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_l_l_m_response}{LLMResponse}}\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ QString\ \doxymbox{\hyperlink{struct_l_l_m_response_a56e20df39bfcff5eddb39f6a6bf21cf5}{generatedCode}};\ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ QString\ \doxymbox{\hyperlink{struct_l_l_m_response_ad075cdf1c3cdfe7d7a431da9acf7c9ad}{schematicDescription}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ QString\ \doxymbox{\hyperlink{struct_l_l_m_response_a987e445408a0ba5d90254dd73e312d2a}{explanation}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_l_l_m_response_a24e2fbb2993f7dc0066df12106b7b55f}{success}}\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ QString\ \doxymbox{\hyperlink{struct_l_l_m_response_af49f58813a69abd8d0d3bf6338bb953e}{errorMessage}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{inline}\ QString\ \doxymbox{\hyperlink{_filter_types_8h_a54a4c88835399188c1a3b5df7eb08d69}{filterTypeName}}(\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{FilterType}}\ type)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{switch}\ (type)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa835f2dc4fd545ddcd275198d9fbadf63}{FilterType::LowPass}}:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Dolnoprzepustowy"{}};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fae9456dc865a19e434997ea20bb5373f6}{FilterType::HighPass}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Górnoprzepustowy"{}};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa39c9e9c45a479147bf5f74156421c744}{FilterType::BandPass}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Pasmo-\/przepustowy"{}};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6d5db574bad228c5f0f92c07e1706fcc}{FilterType::BandStop}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Pasmo-\/zaporowy"{}};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6311ae17c1ee52b36e68aaf4ad066387}{FilterType::Other}}:\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Inny"{}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Nieznany"{}};}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \}}
+
+\end{DoxyCode}

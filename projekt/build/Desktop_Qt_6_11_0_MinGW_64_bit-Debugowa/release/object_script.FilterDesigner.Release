@@ -1,0 +1,15 @@
+release/main.o
+release/MainWindow.o
+release/FilterCalculator.o
+release/OllamaClient.o
+release/OllamaWorker.o
+release/CodeExecutor.o
+release/ParameterWidget.o
+release/ResultWidget.o
+release/qrc_resources.o
+release/moc_MainWindow.o
+release/moc_OllamaClient.o
+release/moc_OllamaWorker.o
+release/moc_CodeExecutor.o
+release/moc_ParameterWidget.o
+release/moc_ResultWidget.o

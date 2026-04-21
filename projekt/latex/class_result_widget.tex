@@ -1,0 +1,57 @@
+\doxysection{Result\+Widget Class Reference}
+\hypertarget{class_result_widget}{}\label{class_result_widget}\index{ResultWidget@{ResultWidget}}
+
+
+Wielozakładkowy panel wyników:\+ obliczenia, kod, schemat, wyjaśnienie, wykres, wyjście.  
+
+
+
+
+{\ttfamily \+\#include $<$Result\+Widget.\+h$>$}
+
+Inheritance diagram for Result\+Widget:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_result_widget}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_result_widget_a040350092ef5a4c7a112daefd2a4e0c5}\label{class_result_widget_a040350092ef5a4c7a112daefd2a4e0c5} 
+void {\bfseries execute\+Code\+Requested} (const QString \&code)
+\begin{DoxyCompactList}\small\item\em Emitowany gdy użytkownik chce wykonać wygenerowany kod. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_result_widget_a0d2d24e77564bf4f16d822b3ad20fb52}\label{class_result_widget_a0d2d24e77564bf4f16d822b3ad20fb52} 
+{\bfseries Result\+Widget} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\Hypertarget{class_result_widget_a7411fee7a705ac5c7c3fd523e897da7a}\label{class_result_widget_a7411fee7a705ac5c7c3fd523e897da7a} 
+void {\bfseries show\+Calculation\+Result} (const \doxymbox{\hyperlink{struct_filter_result}{Filter\+Result}} \&result)
+\begin{DoxyCompactList}\small\item\em Wyświetla wyniki obliczeń matematycznych. \end{DoxyCompactList}\item 
+\Hypertarget{class_result_widget_a6c50903b5f0fa74e5e963bd86a999559}\label{class_result_widget_a6c50903b5f0fa74e5e963bd86a999559} 
+void {\bfseries show\+LLMResponse} (const QString \&response, bool success)
+\begin{DoxyCompactList}\small\item\em Wyświetla odpowiedź LLM (kod, schemat, wyjaśnienie). \end{DoxyCompactList}\item 
+\Hypertarget{class_result_widget_a0958188ffe26d590d52e5e59abd31961}\label{class_result_widget_a0958188ffe26d590d52e5e59abd31961} 
+void {\bfseries show\+Plot} (const QString \&image\+Path)
+\begin{DoxyCompactList}\small\item\em Wyświetla wygenerowany wykres PNG w zakładce Wykres. \end{DoxyCompactList}\item 
+\Hypertarget{class_result_widget_ae3d3d770c45d5d4e457f5010dddb0e18}\label{class_result_widget_ae3d3d770c45d5d4e457f5010dddb0e18} 
+void {\bfseries show\+Execution\+Result} (const QString \&output, bool success)
+\begin{DoxyCompactList}\small\item\em Wyświetla wynik wykonania kodu Python. \end{DoxyCompactList}\item 
+\Hypertarget{class_result_widget_af1de797b2f8490d5fd5fe3a6951f7308}\label{class_result_widget_af1de797b2f8490d5fd5fe3a6951f7308} 
+void {\bfseries set\+Status} (const QString \&message, bool busy=false)
+\begin{DoxyCompactList}\small\item\em Ustawia komunikat statusu. \end{DoxyCompactList}\item 
+\Hypertarget{class_result_widget_a98d1f2f53229dd3954060b35ba77981f}\label{class_result_widget_a98d1f2f53229dd3954060b35ba77981f} 
+void {\bfseries clear\+All} ()
+\begin{DoxyCompactList}\small\item\em Czyści wszystkie pola wynikowe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wielozakładkowy panel wyników:\+ obliczenia, kod, schemat, wyjaśnienie, wykres, wyjście. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_result_widget_8h}{Result\+Widget.\+h}}\item 
+build/\+\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+11\+\_\+0\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Debugowa/\+debug/\+moc\+\_\+\+Result\+Widget.\+cpp\item 
+src/\+\doxymbox{\hyperlink{_result_widget_8cpp}{Result\+Widget.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\doxysection{tests/\+tst\+\_\+\+Code\+Executor.cpp File Reference}
+\hypertarget{tst___code_executor_8cpp}{}\label{tst___code_executor_8cpp}\index{tests/tst\_CodeExecutor.cpp@{tests/tst\_CodeExecutor.cpp}}
+
+
+Testy jednostkowe klasy \doxylink{class_code_executor}{Code\+Executor}.  
+
+
+{\ttfamily \+\#include $<$Qt\+Test/\+\+Qt\+Test$>$}\newline
+{\ttfamily \+\#include "{}Code\+Executor.\+h"{}}\newline
+{\ttfamily \+\#include "{}tst\+\_\+\+Code\+Executor.\+moc"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_test_code_executor}{Test\+Code\+Executor}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{tst___code_executor_8cpp_a02adfb414e33ab2ee55edd585a139d5b}{QVERIFY\+\_\+\+EXCEPTION\+\_\+\+THROWN\+\_\+\+NO\+\_\+\+THROW}}(expr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Testy jednostkowe klasy \doxylink{class_code_executor}{Code\+Executor}. 
+
+Testuje ekstrakcję kodu, schematów i wyjaśnień z odpowiedzi LLM. 
+
+\label{doc-define-members}
+\Hypertarget{tst___code_executor_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{tst___code_executor_8cpp_a02adfb414e33ab2ee55edd585a139d5b}\index{tst\_CodeExecutor.cpp@{tst\_CodeExecutor.cpp}!QVERIFY\_EXCEPTION\_THROWN\_NO\_THROW@{QVERIFY\_EXCEPTION\_THROWN\_NO\_THROW}}
+\index{QVERIFY\_EXCEPTION\_THROWN\_NO\_THROW@{QVERIFY\_EXCEPTION\_THROWN\_NO\_THROW}!tst\_CodeExecutor.cpp@{tst\_CodeExecutor.cpp}}
+\doxysubsubsection{\texorpdfstring{QVERIFY\_EXCEPTION\_THROWN\_NO\_THROW}{QVERIFY\_EXCEPTION\_THROWN\_NO\_THROW}}
+{\footnotesize\ttfamily \label{tst___code_executor_8cpp_a02adfb414e33ab2ee55edd585a139d5b} 
+\+\#define QVERIFY\+\_\+\+EXCEPTION\+\_\+\+THROWN\+\_\+\+NO\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{expr}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{\ expr;\ QVERIFY(\textcolor{keyword}{true});\ \}\ \(\backslash\)}
+\DoxyCodeLine{catch\ (...)\ \{\ QFAIL(\textcolor{stringliteral}{"{}Nieoczekiwany\ wyjątek"{}});\ \}}
+
+\end{DoxyCode}

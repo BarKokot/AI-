@@ -1,0 +1,48 @@
+\doxysection{Code\+Executor.\+h}
+\hypertarget{_code_executor_8h_source}{}\label{_code_executor_8h_source}\index{include/CodeExecutor.h@{include/CodeExecutor.h}}
+\doxymbox{\hyperlink{_code_executor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QProcess>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }CodeExecutor\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ CodeExecutor(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \doxymbox{\hyperlink{class_code_executor_a3e2bdbae679d6e066428e7bd4cc08a0f}{extractCode}}(\textcolor{keyword}{const}\ QString\&\ llmResponse);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \doxymbox{\hyperlink{class_code_executor_af97099e1d8918a3a0fc37d3ecd0aa7ce}{extractSchematic}}(\textcolor{keyword}{const}\ QString\&\ llmResponse);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \doxymbox{\hyperlink{class_code_executor_a434ed317810a7e9a54fa8e7f33f6ebc1}{extractExplanation}}(\textcolor{keyword}{const}\ QString\&\ llmResponse);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \doxymbox{\hyperlink{class_code_executor_a5551e25b0908602e18f1d52db81172d1}{injectPlotSave}}(\textcolor{keyword}{const}\ QString\&\ code);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_code_executor_add3c0f638bacf757a57bb24bcf41473e}{isPythonAvailable}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_code_executor_ae26db53b1d0b269d814337e923a756b6}{executeCode}}(\textcolor{keyword}{const}\ QString\&\ pythonCode);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ signals:}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_code_executor_ad6943ab82bfc35d8cf77bfd7df6c95a2}{executionFinished}}(\textcolor{keyword}{const}\ QString\&\ output,\ \textcolor{keywordtype}{bool}\ success);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_code_executor_a46cddfa2da66815fc3800a3776334ffe}{executionError}}(\textcolor{keyword}{const}\ QString\&\ errorMessage);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ onProcessFinished(\textcolor{keywordtype}{int}\ exitCode,\ QProcess::ExitStatus\ status);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ QProcess*\ m\_process\ \ \ \ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00082\ \ \ \ \ QString\ \ \ m\_tempFilePath;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ QString\ extractBetweenTags(\textcolor{keyword}{const}\ QString\&\ text,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\&\ openTag,}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\&\ closeTag);}
+\DoxyCodeLine{00087\ \};}
+
+\end{DoxyCode}

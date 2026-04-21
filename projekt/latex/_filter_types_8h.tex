@@ -1,0 +1,141 @@
+\doxysection{include/\+\+Filter\+Types.h File Reference}
+\hypertarget{_filter_types_8h}{}\label{_filter_types_8h}\index{include/FilterTypes.h@{include/FilterTypes.h}}
+
+
+Definicje typów i struktur danych używanych w projekcie Filter\+Designer.  
+
+
+{\ttfamily \+\#include $<$QString$>$}\newline
+{\ttfamily \+\#include $<$QString\+List$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}}
+\begin{DoxyCompactList}\small\item\em Struktura przechowująca parametry filtru podane przez użytkownika. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_filter_result}{Filter\+Result}}
+\begin{DoxyCompactList}\small\item\em Struktura przechowująca wyniki obliczeń filtru. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_l_l_m_response}{LLMResponse}}
+\begin{DoxyCompactList}\small\item\em Struktura przechowująca odpowiedź z modelu językowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}} \{ \newline
+\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa835f2dc4fd545ddcd275198d9fbadf63}{Low\+Pass}}
+, \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fae9456dc865a19e434997ea20bb5373f6}{High\+Pass}}
+, \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa39c9e9c45a479147bf5f74156421c744}{Band\+Pass}}
+, \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6d5db574bad228c5f0f92c07e1706fcc}{Band\+Stop}}
+, \newline
+\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6311ae17c1ee52b36e68aaf4ad066387}{Other}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum reprezentujący typ filtru. \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844}{Parameter\+Mode}} \{ \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844a7bd44c2a44f8d76d7083f466211c25d8}{Known\+RC}}
+, \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844aa26571fc070d97ea3638847d57313a70}{KnownF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum reprezentujący tryb podawania parametrów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+QString \doxymbox{\hyperlink{_filter_types_8h_a54a4c88835399188c1a3b5df7eb08d69}{filter\+Type\+Name}} (\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Zwraca nazwę filtru w języku polskim. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definicje typów i struktur danych używanych w projekcie Filter\+Designer. 
+
+\begin{DoxyAuthor}{Author}
+Student JPO 2025/\+2026 
+\end{DoxyAuthor}
+
+
+\label{doc-enum-members}
+\Hypertarget{_filter_types_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}\index{FilterTypes.h@{FilterTypes.h}!FilterType@{FilterType}}
+\index{FilterType@{FilterType}!FilterTypes.h@{FilterTypes.h}}
+\doxysubsubsection{\texorpdfstring{FilterType}{FilterType}}
+{\footnotesize\ttfamily \label{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f} 
+enum class \doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enum reprezentujący typ filtru. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LowPass@{LowPass}!FilterTypes.h@{FilterTypes.h}}
+\index{FilterTypes.h@{FilterTypes.h}!LowPass@{LowPass}}
+}\Hypertarget{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa835f2dc4fd545ddcd275198d9fbadf63}\label{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa835f2dc4fd545ddcd275198d9fbadf63} 
+Low\+Pass&Dolnoprzepustowy. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HighPass@{HighPass}!FilterTypes.h@{FilterTypes.h}}
+\index{FilterTypes.h@{FilterTypes.h}!HighPass@{HighPass}}
+}\Hypertarget{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fae9456dc865a19e434997ea20bb5373f6}\label{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fae9456dc865a19e434997ea20bb5373f6} 
+High\+Pass&Górnoprzepustowy. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BandPass@{BandPass}!FilterTypes.h@{FilterTypes.h}}
+\index{FilterTypes.h@{FilterTypes.h}!BandPass@{BandPass}}
+}\Hypertarget{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa39c9e9c45a479147bf5f74156421c744}\label{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa39c9e9c45a479147bf5f74156421c744} 
+Band\+Pass&Pasmo-\/przepustowy. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BandStop@{BandStop}!FilterTypes.h@{FilterTypes.h}}
+\index{FilterTypes.h@{FilterTypes.h}!BandStop@{BandStop}}
+}\Hypertarget{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6d5db574bad228c5f0f92c07e1706fcc}\label{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6d5db574bad228c5f0f92c07e1706fcc} 
+Band\+Stop&Pasmo-\/zaporowy. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Other@{Other}!FilterTypes.h@{FilterTypes.h}}
+\index{FilterTypes.h@{FilterTypes.h}!Other@{Other}}
+}\Hypertarget{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6311ae17c1ee52b36e68aaf4ad066387}\label{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94fa6311ae17c1ee52b36e68aaf4ad066387} 
+Other&Inny. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_filter_types_8h_a794bec2662f84edb61acfd56016eb844}\index{FilterTypes.h@{FilterTypes.h}!ParameterMode@{ParameterMode}}
+\index{ParameterMode@{ParameterMode}!FilterTypes.h@{FilterTypes.h}}
+\doxysubsubsection{\texorpdfstring{ParameterMode}{ParameterMode}}
+{\footnotesize\ttfamily \label{_filter_types_8h_a794bec2662f84edb61acfd56016eb844} 
+enum class \doxymbox{\hyperlink{_filter_types_8h_a794bec2662f84edb61acfd56016eb844}{Parameter\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enum reprezentujący tryb podawania parametrów. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KnownRC@{KnownRC}!FilterTypes.h@{FilterTypes.h}}
+\index{FilterTypes.h@{FilterTypes.h}!KnownRC@{KnownRC}}
+}\Hypertarget{_filter_types_8h_a794bec2662f84edb61acfd56016eb844a7bd44c2a44f8d76d7083f466211c25d8}\label{_filter_types_8h_a794bec2662f84edb61acfd56016eb844a7bd44c2a44f8d76d7083f466211c25d8} 
+Known\+RC&Znam R i C, wyznaczam f. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KnownF@{KnownF}!FilterTypes.h@{FilterTypes.h}}
+\index{FilterTypes.h@{FilterTypes.h}!KnownF@{KnownF}}
+}\Hypertarget{_filter_types_8h_a794bec2662f84edb61acfd56016eb844aa26571fc070d97ea3638847d57313a70}\label{_filter_types_8h_a794bec2662f84edb61acfd56016eb844aa26571fc070d97ea3638847d57313a70} 
+KnownF&Nie znam R i C, znam f. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{_filter_types_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_filter_types_8h_a54a4c88835399188c1a3b5df7eb08d69}\index{FilterTypes.h@{FilterTypes.h}!filterTypeName@{filterTypeName}}
+\index{filterTypeName@{filterTypeName}!FilterTypes.h@{FilterTypes.h}}
+\doxysubsubsection{\texorpdfstring{filterTypeName()}{filterTypeName()}}
+{\footnotesize\ttfamily \label{_filter_types_8h_a54a4c88835399188c1a3b5df7eb08d69} 
+QString filter\+Type\+Name (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca nazwę filtru w języku polskim. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Typ filtru \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nazwa filtru 
+\end{DoxyReturn}

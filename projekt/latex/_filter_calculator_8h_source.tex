@@ -1,0 +1,46 @@
+\doxysection{Filter\+Calculator.\+h}
+\hypertarget{_filter_calculator_8h_source}{}\label{_filter_calculator_8h_source}\index{include/FilterCalculator.h@{include/FilterCalculator.h}}
+\doxymbox{\hyperlink{_filter_calculator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_filter_types_8h}{FilterTypes.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_filter_calculator_a443464a0bd45fc97a15f1f3182be3859}{FilterCalculator}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_filter_calculator_a443464a0bd45fc97a15f1f3182be3859}{FilterCalculator}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ \doxymbox{\hyperlink{class_filter_calculator_ae75deff418434baf6edf3af463036a13}{calculate}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ params);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_filter_calculator_a0fa00976ab3d7bf25e8ca571b1b5233e}{calcCutoffFrequency}}(\textcolor{keywordtype}{double}\ R,\ \textcolor{keywordtype}{double}\ C);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_filter_calculator_adf5dac2c256b2834013439fe800b3f9f}{calcCapacitance}}(\textcolor{keywordtype}{double}\ f,\ \textcolor{keywordtype}{double}\ R);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_filter_calculator_ada03ab70c027fa1211b4986b3140ee22}{calcResistance}}(\textcolor{keywordtype}{double}\ f,\ \textcolor{keywordtype}{double}\ C);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_filter_calculator_aafea001a95241f30e76f27f8546f5676}{calcQFactor}}(\textcolor{keywordtype}{double}\ f0,\ \textcolor{keywordtype}{double}\ bandwidth);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \doxymbox{\hyperlink{class_filter_calculator_a44e67dba456755ec5a221fe897d6ea0c}{formatEngineering}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keyword}{const}\ QString\&\ unit);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{static}\ std::pair<bool,\ QString>\ \doxymbox{\hyperlink{class_filter_calculator_a847f847798624a0db523c10219e10d1e}{validate}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ params);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calculateLowPass(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00082\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calculateHighPass(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00083\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calculateBandPass(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00084\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calculateBandStop(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00085\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calculateOther(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calcFromRC\_LP(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00088\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calcFromF\_LP(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00089\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calcFromRC\_HP(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00090\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calcFromF\_HP(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00091\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calcFromRC\_BP(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00092\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calcFromF\_BP(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00093\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calcFromRC\_BS(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00094\ \ \ \ \ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\ calcFromF\_BS(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00095\ \};}
+
+\end{DoxyCode}

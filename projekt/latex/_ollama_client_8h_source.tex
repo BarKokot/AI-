@@ -1,0 +1,55 @@
+\doxysection{Ollama\+Client.\+h}
+\hypertarget{_ollama_client_8h_source}{}\label{_ollama_client_8h_source}\index{include/OllamaClient.h@{include/OllamaClient.h}}
+\doxymbox{\hyperlink{_ollama_client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_filter_types_8h}{FilterTypes.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QNetworkReply>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QUrl>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_ollama_client_adcdbb33aed67ee0f3d8d7cd9d40f6b8f}{OllamaClient}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_ollama_client_adcdbb33aed67ee0f3d8d7cd9d40f6b8f}{OllamaClient}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\&\ host\ =\ \textcolor{stringliteral}{"{}localhost"{}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ port\ =\ 11434);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ \ \ \ \ QString\ \doxymbox{\hyperlink{class_ollama_client_adeb4c8e25f77a26b5a137ca314109cfb}{sendRequest}}(\textcolor{keyword}{const}\ QString\&\ systemPrompt,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\&\ userPrompt,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\&\ model\ =\ \textcolor{stringliteral}{"{}qwen3:8b"{}});}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_ollama_client_ad9ab6e2bc694c7394055b112ea2fe76b}{isServerAvailable}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \doxymbox{\hyperlink{class_ollama_client_a58c5b93e21623b95d0367fa963609144}{buildSystemPrompt}}(\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{FilterType}}\ filterType);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \doxymbox{\hyperlink{class_ollama_client_a19750ed322cf2a24a13e25b723650edc}{buildUserPrompt}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ params,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\&\ result,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generatePlot,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generateCode,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generateSchematic);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_ollama_client_a851872c48b3f68c557abb19606ca123b}{setTimeout}}(\textcolor{keywordtype}{int}\ ms)\ \{\ m\_timeout\ =\ ms;\ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ \ \ \ \ QString\ m\_host;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ m\_port;}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ m\_timeout\ =\ 6000000;\ }
+\DoxyCodeLine{00088\ \ \ \ \ QNetworkAccessManager\ m\_nam;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ QString\ m\_apiUrl()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ QString(\textcolor{stringliteral}{"{}http://\%1:\%2/api/generate"{}}).arg(m\_host).arg(m\_port);}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ QString\ m\_tagsUrl()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ QString(\textcolor{stringliteral}{"{}http://\%1:\%2/api/tags"{}}).arg(m\_host).arg(m\_port);}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \};}
+
+\end{DoxyCode}

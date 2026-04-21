@@ -1,0 +1,62 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+Główne okno — orkiestruje wszystkie komponenty aplikacji.  
+
+
+
+
+{\ttfamily \+\#include $<$Main\+Window.\+h$>$}
+
+Inheritance diagram for Main\+Window:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a1f7d2c56410fc1bfa135bb907d43313f}\label{class_main_window_a1f7d2c56410fc1bfa135bb907d43313f} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} () override
+\begin{DoxyCompactList}\small\item\em Destruktor — sprząta wątek roboczy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Główne okno — orkiestruje wszystkie komponenty aplikacji. 
+
+Zarządza cyklem życia zapytania:\+
+\begin{DoxyEnumerate}
+\item Użytkownik wybiera typ filtru i podaje parametry
+\item \doxylink{class_filter_calculator}{Filter\+Calculator} oblicza wyniki matematyczne
+\item \doxylink{class_ollama_worker}{Ollama\+Worker} asynchronicznie pobiera odpowiedź LLM
+\item \doxylink{class_code_executor}{Code\+Executor} uruchamia wygenerowany kod Python 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{class_main_window_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
+Main\+Window::\+\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Rodzic Qt \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_main_window_8h}{Main\+Window.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_main_window_8cpp}{Main\+Window.\+cpp}}\end{DoxyCompactItemize}

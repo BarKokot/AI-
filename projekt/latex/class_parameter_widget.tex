@@ -1,0 +1,86 @@
+\doxysection{Parameter\+Widget Class Reference}
+\hypertarget{class_parameter_widget}{}\label{class_parameter_widget}\index{ParameterWidget@{ParameterWidget}}
+
+
+Dynamiczny panel parametrów dostosowany do wybranego trybu.  
+
+
+
+
+{\ttfamily \+\#include $<$Parameter\+Widget.\+h$>$}
+
+Inheritance diagram for Parameter\+Widget:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_parameter_widget}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_parameter_widget_ae853602479f609363166deead681fb6e}\label{class_parameter_widget_ae853602479f609363166deead681fb6e} 
+void {\bfseries analyze\+Requested} ()
+\begin{DoxyCompactList}\small\item\em Emitowany gdy użytkownik chce uruchomić analizę. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_parameter_widget_a0479b86c172f2a6100fc3bd986fb26c2}\label{class_parameter_widget_a0479b86c172f2a6100fc3bd986fb26c2} 
+{\bfseries Parameter\+Widget} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+void \doxymbox{\hyperlink{class_parameter_widget_a82a4940e6a18b5e2c682ef5679f93a5a}{set\+Filter\+Type}} (\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Ustawia typ filtru i aktualizuje widoczne pola. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} \doxymbox{\hyperlink{class_parameter_widget_ae30ab6fd23420a9838cc4690a1140036}{collect\+Params}} (bool \&ok)
+\begin{DoxyCompactList}\small\item\em Zbiera dane z formularza i zwraca strukturę \doxylink{struct_filter_params}{Filter\+Params}. \end{DoxyCompactList}\item 
+\Hypertarget{class_parameter_widget_a5c1567ef67003d1e31d24fc35ddd76d5}\label{class_parameter_widget_a5c1567ef67003d1e31d24fc35ddd76d5} 
+void {\bfseries clear\+Fields} ()
+\begin{DoxyCompactList}\small\item\em Czyści wszystkie pola formularza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dynamiczny panel parametrów dostosowany do wybranego trybu. 
+
+Wyświetla odpowiednie pola formularza w zależności od trybu (znam RC /\+ znam f) i typu filtru. Zawsze generuje wykres, kod i schemat. 
+
+\label{doc-func-members}
+\Hypertarget{class_parameter_widget_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_parameter_widget_ae30ab6fd23420a9838cc4690a1140036}\index{ParameterWidget@{ParameterWidget}!collectParams@{collectParams}}
+\index{collectParams@{collectParams}!ParameterWidget@{ParameterWidget}}
+\doxysubsubsection{\texorpdfstring{collectParams()}{collectParams()}}
+{\footnotesize\ttfamily \label{class_parameter_widget_ae30ab6fd23420a9838cc4690a1140036} 
+\doxymbox{\hyperlink{struct_filter_params}{Filter\+Params}} Parameter\+Widget::\+collect\+Params (\begin{DoxyParamCaption}\item[{bool \&}]{ok}{}\end{DoxyParamCaption})}
+
+
+
+Zbiera dane z formularza i zwraca strukturę \doxylink{struct_filter_params}{Filter\+Params}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ok} & Ustawione na false jeśli wystąpił błąd walidacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parametry filtru 
+\end{DoxyReturn}
+\Hypertarget{class_parameter_widget_a82a4940e6a18b5e2c682ef5679f93a5a}\index{ParameterWidget@{ParameterWidget}!setFilterType@{setFilterType}}
+\index{setFilterType@{setFilterType}!ParameterWidget@{ParameterWidget}}
+\doxysubsubsection{\texorpdfstring{setFilterType()}{setFilterType()}}
+{\footnotesize\ttfamily \label{class_parameter_widget_a82a4940e6a18b5e2c682ef5679f93a5a} 
+void Parameter\+Widget::\+set\+Filter\+Type (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_filter_types_8h_a7ef0ab496f57e183b484e62e2053c94f}{Filter\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Ustawia typ filtru i aktualizuje widoczne pola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Typ filtru \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_parameter_widget_8h}{Parameter\+Widget.\+h}}\item 
+build/\+\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+11\+\_\+0\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Debugowa/\+debug/\+moc\+\_\+\+Parameter\+Widget.\+cpp\item 
+src/\+\doxymbox{\hyperlink{_parameter_widget_8cpp}{Parameter\+Widget.\+cpp}}\end{DoxyCompactItemize}
