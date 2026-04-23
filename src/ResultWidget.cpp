@@ -108,6 +108,10 @@ void ResultWidget::clearAll() {
     setStatus("Gotowy.");
 }
 
+void ResultWidget::showSchematic(const QString& schematic) {
+    m_schematicEdit->setPlainText(schematic);
+}
+
 void ResultWidget::showCalculationResult(const FilterResult& result) {
     if (!result.valid) {
         m_calcResultEdit->setHtml(
@@ -144,8 +148,8 @@ void ResultWidget::showLLMResponse(const QString& response, bool success) {
         m_btnRunCode->setEnabled(true);
         m_tabs->setCurrentIndex(1); // pokaż zakładkę Kod
     }
-    if (!schema.isEmpty())
-        m_schematicEdit->setPlainText(schema);
+    // Schemat renderowany lokalnie w C++ - ignorujemy schemat z LLM
+    // if (!schema.isEmpty()) m_schematicEdit->setPlainText(schema);
     if (!explain.isEmpty())
         m_explanationEdit->setPlainText(explain);
 

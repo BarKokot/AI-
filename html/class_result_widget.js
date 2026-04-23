@@ -6,5 +6,6 @@ var class_result_widget =
     [ "showCalculationResult", "class_result_widget.html#a7411fee7a705ac5c7c3fd523e897da7a", null ],
     [ "showExecutionResult", "class_result_widget.html#ae3d3d770c45d5d4e457f5010dddb0e18", null ],
     [ "showLLMResponse", "class_result_widget.html#a6c50903b5f0fa74e5e963bd86a999559", null ],
-    [ "showPlot", "class_result_widget.html#a0958188ffe26d590d52e5e59abd31961", null ]
+    [ "showPlot", "class_result_widget.html#a0958188ffe26d590d52e5e59abd31961", null ],
+    [ "showSchematic", "class_result_widget.html#a4a1a84ac06dd63c3d38fc15e14e44fbc", null ]
 ];

@@ -26,5 +26,6 @@ var hierarchy =
     [ "QWidget", null, [
       [ "ParameterWidget", "class_parameter_widget.html", null ],
       [ "ResultWidget", "class_result_widget.html", null ]
-    ] ]
+    ] ],
+    [ "SchematicRenderer", "class_schematic_renderer.html", null ]
 ];

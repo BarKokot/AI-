@@ -84,7 +84,7 @@ public:
 private:
     QString m_host;
     int     m_port;
-    int     m_timeout = 6000000; ///< Domyślny timeout: 60 s
+    int     m_timeout = 240000; ///< Domyślny timeout: 240 s
     QNetworkAccessManager m_nam;
 
     QString m_apiUrl() const {

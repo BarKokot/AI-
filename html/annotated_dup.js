@@ -18,6 +18,7 @@ var annotated_dup =
     [ "OllamaWorker", "class_ollama_worker.html", "class_ollama_worker" ],
     [ "ParameterWidget", "class_parameter_widget.html", "class_parameter_widget" ],
     [ "ResultWidget", "class_result_widget.html", "class_result_widget" ],
+    [ "SchematicRenderer", "class_schematic_renderer.html", null ],
     [ "TestCodeExecutor", "class_test_code_executor.html", null ],
     [ "TestFilterCalculator", "class_test_filter_calculator.html", null ],
     [ "TestOllamaClient", "class_test_ollama_client.html", null ]

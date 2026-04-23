@@ -1,6 +1,13 @@
 #include <QtTest/QtTest>
 #include "CodeExecutor.h"
 
+// Makro pomocnicze (Qt nie ma QVERIFY_EXCEPTION_THROWN_NO_THROW poza Qt6.3+)
+#ifndef QVERIFY_EXCEPTION_THROWN_NO_THROW
+#define QVERIFY_EXCEPTION_THROWN_NO_THROW(expr) \
+    try { expr; QVERIFY(true); } \
+    catch (...) { QFAIL("Nieoczekiwany wyjątek"); }
+#endif
+
 /**
  * @file tst_CodeExecutor.cpp
  * @brief Testy jednostkowe klasy CodeExecutor.
@@ -174,12 +181,8 @@ private slots:
     }
 };
 
-// Makro pomocnicze (Qt nie ma QVERIFY_EXCEPTION_THROWN_NO_THROW poza Qt6.3+)
-#ifndef QVERIFY_EXCEPTION_THROWN_NO_THROW
-#define QVERIFY_EXCEPTION_THROWN_NO_THROW(expr) \
-    try { expr; QVERIFY(true); } \
-    catch (...) { QFAIL("Nieoczekiwany wyjątek"); }
-#endif
-
-QTEST_APPLESS_MAIN(TestCodeExecutor)
+int runTestCodeExecutor(int argc, char *argv[]) {
+    TestCodeExecutor tc;
+    return QTest::qExec(&tc, argc, argv);
+}
 #include "tst_CodeExecutor.moc"

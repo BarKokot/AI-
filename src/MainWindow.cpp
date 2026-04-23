@@ -1,4 +1,5 @@
 #include "MainWindow.h"
+#include "SchematicRenderer.h"
 #include "OllamaClient.h"
 
 #include <QTimer>
@@ -171,10 +172,10 @@ void MainWindow::setupMenuBar() {
     auto* actAbout = new QAction("O programie", this);
     connect(actAbout, &QAction::triggered, this, [this]() {
         QMessageBox::about(this, "O programie",
-            "<b>FilterDesigner v1.0</b><br>"
-            "Projektant filtrów RC z generacją kodu Python<br>"
-            "i analizą przez lokalny model językowy (Ollama).<br><br>"
-            "Projekt JPO 2025/2026");
+                           "<b>FilterDesigner v1.0</b><br>"
+                           "Projektant filtrów RC z generacją kodu Python<br>"
+                           "i analizą przez lokalny model językowy (Ollama).<br><br>"
+                           "Projekt JPO 2025/2026");
     });
     helpMenu->addAction(actAbout);
 }
@@ -188,7 +189,7 @@ void MainWindow::onFilterTypeChanged(int index) {
 void MainWindow::onAnalyzeRequested() {
     if (m_worker && m_worker->isRunning()) {
         QMessageBox::information(this, "Trwa zapytanie",
-            "Poczekaj na zakończenie poprzedniego zapytania.");
+                                 "Poczekaj na zakończenie poprzedniego zapytania.");
         return;
     }
 
@@ -205,6 +206,9 @@ void MainWindow::onAnalyzeRequested() {
 
     if (!m_lastResult.valid) return;
 
+    // Schemat renderowany lokalnie w C++
+    m_resultWidget->showSchematic(SchematicRenderer::render(params, m_lastResult));
+
     // Zapytanie do LLM w osobnym wątku
     setUiBusy(true);
     m_resultWidget->setStatus("Wysyłanie zapytania do modelu...", true);
@@ -213,10 +217,11 @@ void MainWindow::onAnalyzeRequested() {
         params, m_lastResult,
         params.generatePlot, params.generateCode, params.generateSchematic,
         m_modelNameEdit->text().trimmed()
-    );
+        );
     connect(m_worker, &OllamaWorker::finished,   this, &MainWindow::onLLMFinished);
     connect(m_worker, &OllamaWorker::statusUpdate, this, &MainWindow::onLLMStatus);
     connect(m_worker, &QThread::finished, m_worker, &QObject::deleteLater);
+    connect(m_worker, &QObject::destroyed, this, [this]() { m_worker = nullptr; });
     m_worker->start();
 }
 
@@ -234,8 +239,8 @@ void MainWindow::onLLMFinished(const QString& response, bool success) {
 void MainWindow::onExecuteCode(const QString& code) {
     if (!CodeExecutor::isPythonAvailable()) {
         QMessageBox::warning(this, "Brak Pythona",
-            "Python nie jest dostępny w PATH.\n"
-            "Zainstaluj Python 3 i upewnij się, że jest w PATH.");
+                             "Python nie jest dostępny w PATH.\n"
+                             "Zainstaluj Python 3 i upewnij się, że jest w PATH.");
         return;
     }
     m_resultWidget->setStatus("Wykonywanie kodu Python...", true);

@@ -173,8 +173,3 @@ ARCHITEKTURA WIELOWĄTKOWOŚCI
   Wykonanie kodu (QProcess):
     CodeExecutor → python3 <plik_tymczasowy.py>
 
-
-AUTOR
-─────
-Projekt JPO 2025/2026
-Politechnika / Uczelnia

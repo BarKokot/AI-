@@ -16,7 +16,8 @@ SOURCES += \
     src/OllamaWorker.cpp \
     src/CodeExecutor.cpp \
     src/ParameterWidget.cpp \
-    src/ResultWidget.cpp
+    src/ResultWidget.cpp \
+    src/SchematicRenderer.cpp
 
 HEADERS += \
     include/MainWindow.h \
@@ -26,6 +27,7 @@ HEADERS += \
     include/CodeExecutor.h \
     include/ParameterWidget.h \
     include/ResultWidget.h \
+    include/SchematicRenderer.h \
     include/FilterTypes.h
 
 RESOURCES += resources.qrc

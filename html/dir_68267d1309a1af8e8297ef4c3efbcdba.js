@@ -7,5 +7,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "OllamaClient.cpp", "_ollama_client_8cpp.html", null ],
     [ "OllamaWorker.cpp", "_ollama_worker_8cpp.html", null ],
     [ "ParameterWidget.cpp", "_parameter_widget_8cpp.html", null ],
-    [ "ResultWidget.cpp", "_result_widget_8cpp.html", null ]
+    [ "ResultWidget.cpp", "_result_widget_8cpp.html", null ],
+    [ "SchematicRenderer.cpp", "_schematic_renderer_8cpp.html", null ]
 ];

@@ -8,5 +8,6 @@ var searchData=
   ['showexecutionresult_5',['showExecutionResult',['../class_result_widget.html#ae3d3d770c45d5d4e457f5010dddb0e18',1,'ResultWidget']]],
   ['showllmresponse_6',['showLLMResponse',['../class_result_widget.html#a6c50903b5f0fa74e5e963bd86a999559',1,'ResultWidget']]],
   ['showplot_7',['showPlot',['../class_result_widget.html#a0958188ffe26d590d52e5e59abd31961',1,'ResultWidget']]],
-  ['statusupdate_8',['statusUpdate',['../class_ollama_worker.html#ae167fe050e62186f7c51fc60ea27bca8',1,'OllamaWorker']]]
+  ['showschematic_8',['showSchematic',['../class_result_widget.html#a4a1a84ac06dd63c3d38fc15e14e44fbc',1,'ResultWidget']]],
+  ['statusupdate_9',['statusUpdate',['../class_ollama_worker.html#ae167fe050e62186f7c51fc60ea27bca8',1,'OllamaWorker']]]
 ];

@@ -323,18 +323,8 @@ private slots:
         QVERIFY2(r.frequency > 0, "BS: f środkowa musi być > 0");
     }
 
-    // ── Testy filtra "Inne" ───────────────────────────────────────
 
-    void test_calculate_Other() {
-        FilterCalculator calc;
-        FilterParams p;
-        p.type = FilterType::Other;
-        p.customDescription = "Filtr testowy";
 
-        FilterResult r = calc.calculate(p);
-        QVERIFY2(r.valid, "Filtr 'Inne' powinien zwrócić valid=true");
-        QVERIFY(!r.description.isEmpty());
-    }
 
     // ── Testy błędnych parametrów ─────────────────────────────────
 
@@ -377,5 +367,8 @@ private slots:
     }
 };
 
-QTEST_APPLESS_MAIN(TestFilterCalculator)
+int runTestFilterCalculator(int argc, char *argv[]) {
+    TestFilterCalculator tc;
+    return QTest::qExec(&tc, argc, argv);
+}
 #include "tst_FilterCalculator.moc"

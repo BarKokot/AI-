@@ -6,6 +6,7 @@ debug/OllamaWorker.o
 debug/CodeExecutor.o
 debug/ParameterWidget.o
 debug/ResultWidget.o
+debug/SchematicRenderer.o
 debug/qrc_resources.o
 debug/moc_MainWindow.o
 debug/moc_OllamaClient.o

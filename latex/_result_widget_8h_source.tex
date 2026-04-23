@@ -24,31 +24,33 @@
 \DoxyCodeLine{00029\ }
 \DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_a6c50903b5f0fa74e5e963bd86a999559}{showLLMResponse}}(\textcolor{keyword}{const}\ QString\&\ response,\ \textcolor{keywordtype}{bool}\ success);}
 \DoxyCodeLine{00032\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_a0958188ffe26d590d52e5e59abd31961}{showPlot}}(\textcolor{keyword}{const}\ QString\&\ imagePath);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_a4a1a84ac06dd63c3d38fc15e14e44fbc}{showSchematic}}(\textcolor{keyword}{const}\ QString\&\ schematic);}
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_ae3d3d770c45d5d4e457f5010dddb0e18}{showExecutionResult}}(\textcolor{keyword}{const}\ QString\&\ output,\ \textcolor{keywordtype}{bool}\ success);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_a0958188ffe26d590d52e5e59abd31961}{showPlot}}(\textcolor{keyword}{const}\ QString\&\ imagePath);}
 \DoxyCodeLine{00038\ }
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_af1de797b2f8490d5fd5fe3a6951f7308}{setStatus}}(\textcolor{keyword}{const}\ QString\&\ message,\ \textcolor{keywordtype}{bool}\ busy\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_ae3d3d770c45d5d4e457f5010dddb0e18}{showExecutionResult}}(\textcolor{keyword}{const}\ QString\&\ output,\ \textcolor{keywordtype}{bool}\ success);}
 \DoxyCodeLine{00041\ }
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_a98d1f2f53229dd3954060b35ba77981f}{clearAll}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_af1de797b2f8490d5fd5fe3a6951f7308}{setStatus}}(\textcolor{keyword}{const}\ QString\&\ message,\ \textcolor{keywordtype}{bool}\ busy\ =\ \textcolor{keyword}{false});}
 \DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ signals:}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_a040350092ef5a4c7a112daefd2a4e0c5}{executeCodeRequested}}(\textcolor{keyword}{const}\ QString\&\ code);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_a98d1f2f53229dd3954060b35ba77981f}{clearAll}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ signals:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_result_widget_a040350092ef5a4c7a112daefd2a4e0c5}{executeCodeRequested}}(\textcolor{keyword}{const}\ QString\&\ code);}
 \DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ QTabWidget*\ \ \ \ \ m\_tabs;}
-\DoxyCodeLine{00053\ \ \ \ \ QTextEdit*\ \ \ \ \ \ m\_calcResultEdit;\ \ \ }
-\DoxyCodeLine{00054\ \ \ \ \ QPlainTextEdit*\ m\_codeEdit;\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00055\ \ \ \ \ QPlainTextEdit*\ m\_schematicEdit;\ \ \ \ }
-\DoxyCodeLine{00056\ \ \ \ \ QTextEdit*\ \ \ \ \ \ m\_explanationEdit;\ \ }
-\DoxyCodeLine{00057\ \ \ \ \ QLabel*\ \ \ \ \ \ \ \ \ m\_plotLabel;\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00058\ \ \ \ \ QScrollArea*\ \ \ \ m\_plotScroll;\ \ \ \ \ \ \ }
-\DoxyCodeLine{00059\ \ \ \ \ QTextEdit*\ \ \ \ \ \ m\_execOutputEdit;\ \ \ }
-\DoxyCodeLine{00060\ \ \ \ \ QLabel*\ \ \ \ \ \ \ \ \ m\_statusLabel;}
-\DoxyCodeLine{00061\ \ \ \ \ QPushButton*\ \ \ \ m\_btnRunCode;}
-\DoxyCodeLine{00062\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ m\_currentCode;}
-\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ QTabWidget*\ \ \ \ \ m\_tabs;}
+\DoxyCodeLine{00056\ \ \ \ \ QTextEdit*\ \ \ \ \ \ m\_calcResultEdit;\ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ QPlainTextEdit*\ m\_codeEdit;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ QPlainTextEdit*\ m\_schematicEdit;\ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ QTextEdit*\ \ \ \ \ \ m\_explanationEdit;\ \ }
+\DoxyCodeLine{00060\ \ \ \ \ QLabel*\ \ \ \ \ \ \ \ \ m\_plotLabel;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ QScrollArea*\ \ \ \ m\_plotScroll;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ QTextEdit*\ \ \ \ \ \ m\_execOutputEdit;\ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ QLabel*\ \ \ \ \ \ \ \ \ m\_statusLabel;}
+\DoxyCodeLine{00064\ \ \ \ \ QPushButton*\ \ \ \ m\_btnRunCode;}
+\DoxyCodeLine{00065\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ m\_currentCode;}
+\DoxyCodeLine{00066\ \};}
 
 \end{DoxyCode}

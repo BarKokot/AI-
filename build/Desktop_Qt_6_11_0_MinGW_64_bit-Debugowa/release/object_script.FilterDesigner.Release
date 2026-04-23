@@ -6,6 +6,7 @@ release/OllamaWorker.o
 release/CodeExecutor.o
 release/ParameterWidget.o
 release/ResultWidget.o
+release/SchematicRenderer.o
 release/qrc_resources.o
 release/moc_MainWindow.o
 release/moc_OllamaClient.o

@@ -200,5 +200,8 @@ private slots:
     }
 };
 
-QTEST_APPLESS_MAIN(TestOllamaClient)
+int runTestOllamaClient(int argc, char *argv[]) {
+    TestOllamaClient tc;
+    return QTest::qExec(&tc, argc, argv);
+}
 #include "tst_OllamaClient.moc"

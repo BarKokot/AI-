@@ -10,6 +10,7 @@ TEMPLATE = app
 INCLUDEPATH += ../include
 
 SOURCES += \
+    main.cpp \
     tst_FilterCalculator.cpp \
     tst_OllamaClient.cpp \
     tst_CodeExecutor.cpp \

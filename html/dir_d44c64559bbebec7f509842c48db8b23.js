@@ -7,5 +7,6 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "OllamaClient.h", "_ollama_client_8h.html", "_ollama_client_8h" ],
     [ "OllamaWorker.h", "_ollama_worker_8h.html", "_ollama_worker_8h" ],
     [ "ParameterWidget.h", "_parameter_widget_8h.html", "_parameter_widget_8h" ],
-    [ "ResultWidget.h", "_result_widget_8h.html", "_result_widget_8h" ]
+    [ "ResultWidget.h", "_result_widget_8h.html", "_result_widget_8h" ],
+    [ "SchematicRenderer.h", "_schematic_renderer_8h.html", "_schematic_renderer_8h" ]
 ];

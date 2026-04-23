@@ -30,6 +30,9 @@ public:
     /** @brief Wyświetla odpowiedź LLM (kod, schemat, wyjaśnienie). */
     void showLLMResponse(const QString& response, bool success);
 
+    /** @brief Wyświetla schemat ASCII wygenerowany w C++. */
+    void showSchematic(const QString& schematic);
+
     /** @brief Wyświetla wygenerowany wykres PNG w zakładce Wykres. */
     void showPlot(const QString& imagePath);
 

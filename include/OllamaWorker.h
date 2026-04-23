@@ -4,6 +4,7 @@
 #include "OllamaClient.h"
 #include <QThread>
 #include <QString>
+#include <atomic>
 
 /**
  * @file OllamaWorker.h
@@ -23,13 +24,13 @@ class OllamaWorker : public QThread {
 public:
     /**
      * @brief Konstruktor.
-     * @param params           Parametry filtru
-     * @param result           Wyniki obliczeń
-     * @param generatePlot     Generuj wykres
-     * @param generateCode     Generuj kod
+     * @param params            Parametry filtru
+     * @param result            Wyniki obliczeń
+     * @param generatePlot      Generuj wykres
+     * @param generateCode      Generuj kod
      * @param generateSchematic Generuj schemat
-     * @param model            Nazwa modelu Ollama
-     * @param parent           Rodzic Qt
+     * @param model             Nazwa modelu Ollama
+     * @param parent            Rodzic Qt
      */
     explicit OllamaWorker(const FilterParams& params,
                           const FilterResult& result,
@@ -38,6 +39,11 @@ public:
                           bool generateSchematic,
                           const QString& model = "qwen3:8b",
                           QObject* parent = nullptr);
+
+    /**
+     * @brief Żąda przerwania zapytania (bezpieczne dla wątków).
+     */
+    void requestAbort() { m_abort.store(true); }
 
 signals:
     /**
@@ -60,10 +66,11 @@ protected:
     void run() override;
 
 private:
-    FilterParams  m_params;
-    FilterResult  m_result;
-    bool          m_generatePlot;
-    bool          m_generateCode;
-    bool          m_generateSchematic;
-    QString       m_model;
+    FilterParams       m_params;
+    FilterResult       m_result;
+    bool               m_generatePlot;
+    bool               m_generateCode;
+    bool               m_generateSchematic;
+    QString            m_model;
+    std::atomic<bool>  m_abort{false}; ///< Flaga bezpiecznego przerwania
 };

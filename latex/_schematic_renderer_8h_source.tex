@@ -1,0 +1,23 @@
+\doxysection{Schematic\+Renderer.\+h}
+\hypertarget{_schematic_renderer_8h_source}{}\label{_schematic_renderer_8h_source}\index{include/SchematicRenderer.h@{include/SchematicRenderer.h}}
+\doxymbox{\hyperlink{_schematic_renderer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_filter_types_8h}{FilterTypes.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_schematic_renderer}{SchematicRenderer}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \doxymbox{\hyperlink{class_schematic_renderer_a035f58e778f81d9376165a973116b092}{render}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ params,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\&\ result);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ QString\ renderLowPass(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\&\ r);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ QString\ renderHighPass(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\&\ r);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ QString\ renderBandPass(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\&\ r);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ QString\ renderBandStop(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_result}{FilterResult}}\&\ r);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ QString\ renderOther(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_filter_params}{FilterParams}}\&\ p);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ QString\ formatVal(\textcolor{keywordtype}{double}\ v,\ \textcolor{keyword}{const}\ QString\&\ unit);}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

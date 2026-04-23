@@ -1,0 +1,212 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'tst_FilterCalculator.cpp'
+**
+** Created by: The Qt Meta Object Compiler version 69 (Qt 6.11.0)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include <QtCore/qmetatype.h>
+
+#include <QtCore/qtmochelpers.h>
+
+#include <memory>
+
+
+#include <QtCore/qxptype_traits.h>
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'tst_FilterCalculator.cpp' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 69
+#error "This file was generated using the moc from 6.11.0. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
+#endif
+
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_DEPRECATED
+QT_WARNING_DISABLE_GCC("-Wuseless-cast")
+namespace {
+struct qt_meta_tag_ZN20TestFilterCalculatorE_t {};
+} // unnamed namespace
+
+template <> constexpr inline auto TestFilterCalculator::qt_create_metaobjectdata<qt_meta_tag_ZN20TestFilterCalculatorE_t>()
+{
+    namespace QMC = QtMocConstants;
+    QtMocHelpers::StringRefStorage qt_stringData {
+        "TestFilterCalculator",
+        "test_calcCutoffFrequency_basic",
+        "",
+        "test_calcCutoffFrequency_zeroR",
+        "test_calcCutoffFrequency_zeroC",
+        "test_calcCapacitance_basic",
+        "test_calcResistance_basic",
+        "test_RC_roundtrip",
+        "test_calcQFactor",
+        "test_formatEngineering_kHz",
+        "test_formatEngineering_nF",
+        "test_formatEngineering_zero",
+        "test_validate_validRC_LP",
+        "test_validate_invalidRC_zeroR",
+        "test_validate_invalidRC_zeroC",
+        "test_validate_validF_LP",
+        "test_validate_invalidF_zeroF0",
+        "test_validate_BP_f1_ge_f2",
+        "test_validate_BP_RC_missingR2",
+        "test_calculate_LP_KnownRC",
+        "test_calculate_LP_KnownF",
+        "test_calculate_HP_KnownRC",
+        "test_calculate_HP_KnownF",
+        "test_calculate_BP_KnownRC",
+        "test_calculate_BP_KnownF",
+        "test_calculate_BS_KnownRC",
+        "test_calculate_BS_KnownF",
+        "test_calculate_invalid_returnsError",
+        "test_Q_increases_with_narrower_band"
+    };
+
+    QtMocHelpers::UintData qt_methods {
+        // Slot 'test_calcCutoffFrequency_basic'
+        QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calcCutoffFrequency_zeroR'
+        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calcCutoffFrequency_zeroC'
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calcCapacitance_basic'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calcResistance_basic'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_RC_roundtrip'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calcQFactor'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_formatEngineering_kHz'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_formatEngineering_nF'
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_formatEngineering_zero'
+        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_validate_validRC_LP'
+        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_validate_invalidRC_zeroR'
+        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_validate_invalidRC_zeroC'
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_validate_validF_LP'
+        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_validate_invalidF_zeroF0'
+        QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_validate_BP_f1_ge_f2'
+        QtMocHelpers::SlotData<void()>(17, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_validate_BP_RC_missingR2'
+        QtMocHelpers::SlotData<void()>(18, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_LP_KnownRC'
+        QtMocHelpers::SlotData<void()>(19, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_LP_KnownF'
+        QtMocHelpers::SlotData<void()>(20, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_HP_KnownRC'
+        QtMocHelpers::SlotData<void()>(21, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_HP_KnownF'
+        QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_BP_KnownRC'
+        QtMocHelpers::SlotData<void()>(23, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_BP_KnownF'
+        QtMocHelpers::SlotData<void()>(24, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_BS_KnownRC'
+        QtMocHelpers::SlotData<void()>(25, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_BS_KnownF'
+        QtMocHelpers::SlotData<void()>(26, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_calculate_invalid_returnsError'
+        QtMocHelpers::SlotData<void()>(27, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'test_Q_increases_with_narrower_band'
+        QtMocHelpers::SlotData<void()>(28, 2, QMC::AccessPrivate, QMetaType::Void),
+    };
+    QtMocHelpers::UintData qt_properties {
+    };
+    QtMocHelpers::UintData qt_enums {
+    };
+    return QtMocHelpers::metaObjectData<TestFilterCalculator, qt_meta_tag_ZN20TestFilterCalculatorE_t>(QMC::MetaObjectFlag{}, qt_stringData,
+            qt_methods, qt_properties, qt_enums);
+}
+Q_CONSTINIT const QMetaObject TestFilterCalculator::staticMetaObject = { {
+    QMetaObject::SuperData::link<QObject::staticMetaObject>(),
+    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN20TestFilterCalculatorE_t>.stringdata,
+    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN20TestFilterCalculatorE_t>.data,
+    qt_static_metacall,
+    nullptr,
+    qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN20TestFilterCalculatorE_t>.metaTypes,
+    nullptr
+} };
+
+void TestFilterCalculator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    auto *_t = static_cast<TestFilterCalculator *>(_o);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->test_calcCutoffFrequency_basic(); break;
+        case 1: _t->test_calcCutoffFrequency_zeroR(); break;
+        case 2: _t->test_calcCutoffFrequency_zeroC(); break;
+        case 3: _t->test_calcCapacitance_basic(); break;
+        case 4: _t->test_calcResistance_basic(); break;
+        case 5: _t->test_RC_roundtrip(); break;
+        case 6: _t->test_calcQFactor(); break;
+        case 7: _t->test_formatEngineering_kHz(); break;
+        case 8: _t->test_formatEngineering_nF(); break;
+        case 9: _t->test_formatEngineering_zero(); break;
+        case 10: _t->test_validate_validRC_LP(); break;
+        case 11: _t->test_validate_invalidRC_zeroR(); break;
+        case 12: _t->test_validate_invalidRC_zeroC(); break;
+        case 13: _t->test_validate_validF_LP(); break;
+        case 14: _t->test_validate_invalidF_zeroF0(); break;
+        case 15: _t->test_validate_BP_f1_ge_f2(); break;
+        case 16: _t->test_validate_BP_RC_missingR2(); break;
+        case 17: _t->test_calculate_LP_KnownRC(); break;
+        case 18: _t->test_calculate_LP_KnownF(); break;
+        case 19: _t->test_calculate_HP_KnownRC(); break;
+        case 20: _t->test_calculate_HP_KnownF(); break;
+        case 21: _t->test_calculate_BP_KnownRC(); break;
+        case 22: _t->test_calculate_BP_KnownF(); break;
+        case 23: _t->test_calculate_BS_KnownRC(); break;
+        case 24: _t->test_calculate_BS_KnownF(); break;
+        case 25: _t->test_calculate_invalid_returnsError(); break;
+        case 26: _t->test_Q_increases_with_narrower_band(); break;
+        default: ;
+        }
+    }
+    (void)_a;
+}
+
+const QMetaObject *TestFilterCalculator::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
+}
+
+void *TestFilterCalculator::qt_metacast(const char *_clname)
+{
+    if (!_clname) return nullptr;
+    if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN20TestFilterCalculatorE_t>.strings))
+        return static_cast<void*>(this);
+    return QObject::qt_metacast(_clname);
+}
+
+int TestFilterCalculator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QObject::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 27)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 27;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 27)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 27;
+    }
+    return _id;
+}
+QT_WARNING_POP
