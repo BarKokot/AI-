@@ -154,7 +154,7 @@ FilterDesigner/
 OBSŁUGA BŁĘDÓW
 ──────────────
   • Brak Ollamy       → komunikat w statusie, aplikacja działa dalej
-  • Timeout (>60s)    → informacja w zakładce wyników
+  • Timeout (>240s)    → informacja w zakładce wyników
   • Brak Pythona      → ostrzeżenie przy próbie uruchomienia kodu
   • Błędne parametry  → walidacja z opisem błędu przed wysłaniem
   • Puste opcje gen.  → ostrzeżenie z prośbą o zaznaczenie opcji
