@@ -33,7 +33,7 @@ INSTALACJA I URUCHOMIENIE
 
 1. KLONOWANIE REPOZYTORIUM
    ~~~~~~~~~~~~~~~~~~~~~~~~
-   git clone https://github.com/<twoje-repo>/FilterDesigner.git
+   git clone https://github.com/AI-/FilterDesigner.git
    cd FilterDesigner
 
 2. INSTALACJA OLLAMY I MODELU
